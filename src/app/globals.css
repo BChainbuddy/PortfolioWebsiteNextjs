@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,258 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+body {
+  background-image: url("../../public/backgroundBlurred.png");
+  background-size: cover;
+  margin: 0; /* Remove any default margins */
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
+  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+}
+
+.bg-LightBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(169 100% 41% / var(--tw-bg-opacity));
+}
+
+.text-LightBlue {
+  --tw-text-opacity: 1;
+  color: hsl(169 100% 41% / var(--tw-text-opacity));
+}
+
+.border-LightBlue {
+  border: 2px solid hsl(169 100% 41%);
+}
+
+.hover\:border-LightBlue:hover {
+  border: 2px solid hsl(169 100% 41%);
+}
+
+.bg-DarkBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+}
+
+.text-DarkBlue {
+  --tw-text-opacity: 1;
+  color: hsl(169 100% 7% / var(--tw-text-opacity));
+}
+
+.custom-gradient-right {
+  background-image: linear-gradient(
+    to right,
+    hsl(360, 100%, 100%),
+    hsl(169 100% 41%)
+  );
+}
+
+.custom-gradient-left {
+  background-image: linear-gradient(
+    to left,
+    hsl(360, 100%, 100%),
+    hsl(169 100% 41%)
+  );
+}
+
+.custom-gradient-bottom {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(360, 100%, 100%),
+    hsl(169 100% 41%)
+  );
+}
+
+.custom-gradient-top {
+  background-image: linear-gradient(
+    to top,
+    hsl(360, 100%, 100%),
+    hsl(169 100% 41%)
+  );
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.menuClose {
+  transition: all 900ms 50ms ease;
+  max-height: 0;
+}
+
+.menuOpen {
+  max-height: 500px;
+}
+
+@media (min-width: 240px) {
+  .sm\:custom-gradient-top {
+    background-image: linear-gradient(
+      to top,
+      hsl(360, 100%, 100%),
+      hsl(169 100% 41%)
+    ); /* Your gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:custom-gradient-bottom {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(360, 100%, 100%),
+      hsl(169 100% 41%)
+    ); /* Your gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+.glowing-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.2em; /* Adjust the distance of the underline from the text */
+}
+
+.glowing-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* Adjust the distance of the underline from the text */
+  width: 100%;
+  height: 6px; /* Adjust the thickness of the underline */
+  background-image: linear-gradient(
+    90deg,
+    #a0d5f7,
+    #b4e3ff,
+    #a0d5f7
+  ); /* Light blue gradient colors */
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* Add a transition for the glowing effect */
+  background-position: 100%;
+  border-radius: 5px; /* Adjust the corner rounding */
+  animation: glowing-underline-animation 2s infinite linear;
+}
+
+@keyframes glowing-underline-animation {
+  0% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.homepage-start1 {
+  transform: translateY(35px);
+  opacity: 0;
+  animation: animateHomePage 1000ms forwards 300ms;
+}
+
+.homepage-start2 {
+  transform: translateY(35px);
+  opacity: 0;
+  animation: animateHomePage 1000ms forwards 500ms;
+}
+
+.homepage-start3 {
+  transform: translateY(35px);
+  opacity: 0;
+  animation: animateHomePage 1000ms forwards 700ms;
+}
+
+@keyframes animateHomePage {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.contact1 {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: animateContactPage 1000ms forwards 300ms;
+}
+.contact2 {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: animateContactPage 1000ms forwards 500ms;
+}
+.contact3 {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: animateContactPage 1000ms forwards 700ms;
+}
+
+@keyframes animateContactPage {
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.start-resource-even {
+  transform: translateX(40px) translateY(30px);
+  transition: 1000ms;
+  opacity: 0;
+}
+
+.start-resource-odd {
+  transform: translateX(-40px) translateY(30px);
+  transition: 1000ms;
+  opacity: 0;
+}
+
+.end-resource {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px);
 }

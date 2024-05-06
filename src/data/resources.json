@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Codecademy",
+        "text": "Codecademy is an online learning platform that teaches programming. From languages to frameworks, anyone can learn something new at Codecademy. When I saw Codecademy on sale, I knew this is the perfect time to take my web development skills to the next level. I started a certificate course in web development, where I learned the terminology of web development as well as HTML, CSS, and JavaScript. I am currently still pursuing the certificate but I am on a good way to get it.",
+        "url": "https://www.codecademy.com/catalog"
+    },
+    {
+        "name": "FreeCodeCamp Javascript Blockchain Course",
+        "text": "This is the first real full web3 learning tutorial that set me up with all the needed techniques to write smart contracts and deploy them. In this course, I learned Solidity smart contract programming, JavaScript for web3 development, Next.js framework, Tailwind CSS for CSS, HTML, IPFS. I have also learned core blockchain concepts such as ERC20, ERC721, DAO, DeFi, and much more. After this course, I could confidently write and deploy smart contracts. It is the best course regarding web3 and programming.",
+        "url": "https://www.freecodecamp.org/news/learn-blockchain-solidity-full-stack-javascript-development/"
+    },
+    {
+        "name": "Crypto Zombies",
+        "text": "CryptoZombies is a very interesting online learning platform focusing on Solidity development. The courses are very well structured, and while you are learning, you are actually building a NFT game. I learned a lot about connecting smart contracts to each other, ERC20, ERC712, and a little frontend web3 development in React.",
+        "url": "https://cryptozombies.io"
+    },
+    {
+        "name": "Moralis Academy",
+        "text": "Moralis Academy is the web3 online learning academy. Similar to Codecademy, they have courses teaching developers everything they need to know to start in web3 development. I was subscribed a couple of months because I was really interested in the creation of trading bots in JavaScript, and TradingView strategy development in PineScript. I also started Solidity development for the first time on the side.",
+        "url": "https://academy.moralis.io"
+    },
+    {
+        "name": "Udemy",
+        "text": "Udemy is one of the biggest platforms where people can learn anything they want. The platform provides courses which users can buy. The courses are fairly cheap but provide a lot of knowledge. It has everything from yoga to software development. I bought a course on data analytics with PostgreSQL, where I learned everything about SQL environment and how to use it. It was very well structured and it was my first introduction into database management and analytics.",
+        "url": "https://www.udemy.com"
+    }
+]

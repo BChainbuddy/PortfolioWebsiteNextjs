@@ -1,0 +1,60 @@
+{ "frontend" : [
+    {
+        "name": "REACT",
+        "img_src": "/react3.png"
+    }, 
+    {
+        "name": "TAILWINDCSS",
+        "img_src": "/Tailwindcss.png"
+    },
+    {
+        "name": "NEXTJS",
+        "img_src": "/nextjs.png"
+    },
+    {
+        "name": "HTML",
+        "img_src": "/html5.png"
+    },     
+    {
+        "name": "CSS",
+        "img_src": "/cssLogo.png"
+    },    
+    {
+        "name": "REDUX",
+        "img_src": "/Redux.png"
+    }],
+    "backend": [    
+    {
+        "name": "JAVASCRIPT",
+        "img_src": "/Tailwindcss.png"
+    },    
+    {
+        "name": "SOLIDITY",
+        "img_src": "/solidity.png"
+    },    
+    {
+        "name": "PYTHON",
+        "img_src": "/python.png"
+    },    
+    {
+        "name": "HARDHAT",
+        "img_src": "/hardhat.png"
+    },    
+    {
+        "name": "ETHERS",
+        "img_src": "/ethers.png"
+    },    
+    {
+        "name": "EXPRESSJS",
+        "img_src": "/expressjs.png"
+    }],
+    "database":[     
+    {
+        "name": "POSTGRESQL",
+        "img_src": "/postgresql.jpg"
+    },    
+    {
+        "name": "GRAPHQL",
+        "img_src": "/graphql.png"
+    }]
+}
