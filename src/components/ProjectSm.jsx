@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export default function ProjectSm({ project, index }) {
@@ -18,22 +19,44 @@ export default function ProjectSm({ project, index }) {
           Hover on picture to choose a code file
           <p className="text-sm sm:hidden md:flex">👇</p>
         </p>
-        <a
-          href={project.github_url}
-          className="sm:flex md:hidden flex-row space-x-0.5"
+        <div
+          className={`sm:flex md:hidden ${
+            project.demo_url ? "" : "w-full justify-center items-center"
+          }`}
         >
-          <p>Click here for code</p>
-          <img src="Img/linkclick.png" className="invert h-3 w-3 mt-0.5" />
-        </a>
-        {project.demo_url ? (
           <a
-            href={project.demo_url}
-            className="sm:flex md:hidden flex flex-row space-x-0.5"
-            target="_blank"
+            href={project.github_url}
+            className="flex flex-row space-x-0.5"
           >
-            <p>Click here for demo</p>
-            <img src="Img/linkclick.png" className="invert h-3 w-3 mt-0.5" />
+            <p>Click here for code</p>
+            <span className="h-3 w-3 relative my-auto">
+              <Image
+                src="/linkclick.png"
+                className="invert"
+                fill
+                alt="clickPhoto"
+              />
+            </span>
           </a>
+        </div>
+        {project.demo_url ? (
+          <div className="sm:flex md:hidden">
+            <a
+              href={project.demo_url}
+              className="flex flex-row space-x-0.5"
+              target="_blank"
+            >
+              <p>Click here for demo</p>
+              <span className="h-3 w-3 relative my-auto">
+                <Image
+                  src="/linkclick.png"
+                  className="invert"
+                  fill
+                  alt="clickPhoto"
+                />
+              </span>
+            </a>
+          </div>
         ) : (
           <></>
         )}

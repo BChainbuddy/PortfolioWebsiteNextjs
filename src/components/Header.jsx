@@ -4,24 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MenuButton from "./MenuButton";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
+  const [fixedHeader, setFixedHeader] = useState(false);
+
   const pathname = usePathname();
+  const elementRef = useRef(null);
+  
 
   return (
     <>
-      <div className="z-20 sm:h-[10vh] lg:h-[20vh] flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue lg:border-b-0 sm:bg-teal-950 w-screen lg:bg-transparent">
+      <div
+        className="z-20 sm:h-[10vh] lg:h-[20vh] flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue lg:border-b-0 sm:bg-teal-950 w-screen lg:bg-transparent"
+        ref={elementRef}
+      >
         <div className="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
           <div className="lg:h-12 lg:w-12 sm:h-10 sm:w-10 relative">
-            <Image
-              src="/jakapLogoTransparent.png"
-              width={0}
-              height={0}
-              alt="logo"
-              objectFit="contain"
-              unoptimized={true}
-              fill
-            />
+            <Image src="/jakapLogoTransparent.png" alt="logo" fill />
           </div>
           <p className="sm:self-center cursor-default text-3xl font-thin font-mono text-transparent bg-clip-text custom-gradient-left">
             JAKA

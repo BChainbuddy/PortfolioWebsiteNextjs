@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -32,10 +33,13 @@ export default function Project({ project, index }) {
       <div className="relative group">
         <div>
           <div>
-            <img
-              src={project.img_src}
-              className="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none"
-            />
+            <div className="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none relative">
+              <Image
+                src={project.img_src}
+                alt={("Photo of project ", index)}
+                fill
+              />
+            </div>
             <div className="md:flex sm:hidden">
               <a href={project.github_url}>
                 <div

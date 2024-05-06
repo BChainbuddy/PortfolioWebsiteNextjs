@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutMe() {
   return (
     <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8">
@@ -63,8 +65,17 @@ export default function AboutMe() {
                 Click here to check my CV |
               </p>
             </a>
-            <a href="resume/JakaPotokar_CV_eng_web.pdf" target="_blank">
-              <img src="Img/linkclick.png" className="h-6 w-6 invert" />
+            <a
+              href="resume/JakaPotokar_CV_eng_web.pdf"
+              target="_blank"
+              className="invert"
+            >
+              <Image
+                src="/linkclick.png"
+                width={21}
+                height={21}
+                alt="clickPhoto"
+              />
             </a>
           </div>
         </div>
@@ -121,8 +132,17 @@ export default function AboutMe() {
                 Click here to check my CV
               </p>
             </a>
-            <a href="/resume/JakaPotokar_CV_eng_web.pdf" target="_blank">
-              <img src="/linkclick.png" classNameName="sm:h-4 sm:w-4 sm:mt-1 invert" />
+            <a
+              href="/resume/JakaPotokar_CV_eng_web.pdf"
+              target="_blank"
+              className="mt-1 invert"
+            >
+              <Image
+                src="/linkclick.png"
+                width={15}
+                height={15}
+                alt="clickPhoto"
+              />
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 export default function LearningResource({
   color,
@@ -22,7 +22,13 @@ export default function LearningResource({
       } ${inView ? "end-resource" : ""}`}
       ref={ref}
     >
-      {even ? <img src={img_src} className="w-1/2 rounded-2xl" /> : <></>}
+      {even ? (
+        <div className="w-1/2 rounded-2xl overflow-hidden relative">
+          <Image src={img_src} alt={title} fill />
+        </div>
+      ) : (
+        <></>
+      )}
 
       <div
         className={`text-justify w-1/2 backdrop-blur-3xl ${borderColor} border-2 rounded-2xl py-5 px-8 space-y-3`}
@@ -31,13 +37,19 @@ export default function LearningResource({
         <p className="text-white">
           {text}
           <span className={color}>
-            <a href={url} className="underline ml-3">
+            <a href={url} className="underline ml-3" target="_blank">
               Learn more
             </a>
           </span>
         </p>
       </div>
-      {even ? <></> : <img src={img_src} className="w-1/2 rounded-2xl" />}
+      {even ? (
+        <></>
+      ) : (
+        <div className="w-1/2 rounded-2xl overflow-hidden relative">
+          <Image src={img_src} alt={title} fill />
+        </div>
+      )}
     </article>
   );
 }
