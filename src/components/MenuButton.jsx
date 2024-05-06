@@ -24,11 +24,11 @@ export default function MenuButton() {
       </button>
       <div
         id="menu"
-        class={`lg:hidden fixed z-10 top-[10vh] left-8 right-8 overflow-hidden menuClose ${
+        className={`lg:hidden fixed z-10 top-[10vh] left-8 right-8 overflow-hidden menuClose ${
           menuOpen ? "menuOpen" : ""
         }`}
       >
-        <div class="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg text-black text-lg">
+        <div className="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg text-black text-lg">
           <Link href="/" className={`${pathname === "/" ? "text-white" : ""}`}>
             Home
           </Link>

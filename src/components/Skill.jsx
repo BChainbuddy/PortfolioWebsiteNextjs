@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Technology({ skill }) {
   return (
-    <div class="relative group inline-block">
+    <div className="relative group inline-block">
       <img
         src={skill.img_src}
         className="sm:h-20 sm:w-20 md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl"

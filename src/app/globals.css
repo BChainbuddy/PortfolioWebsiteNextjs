@@ -285,3 +285,43 @@ body {
   opacity: 1;
   transform: translateX(0px) translateY(0px);
 }
+
+.project1 {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1000ms 100ms;
+}
+
+.project2 {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1000ms 300ms;
+}
+
+.project3 {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1000ms 500ms;
+}
+
+.project-end {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.start-resource-even {
+  transform: translateX(40px) translateY(30px);
+  transition: 1000ms;
+  opacity: 0;
+}
+
+.start-resource-odd {
+  transform: translateX(-40px) translateY(30px);
+  transition: 1000ms;
+  opacity: 0;
+}
+
+.end-resource {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px);
+}
