@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import PROJECTS from "../data/projects.json";
 import Project from "./Project";
 
-export default function ProjectList({ open, setOpen, filter, setFilter }) {
+interface projectListProps {
+  open: boolean,
+  setOpen: (open: boolean) => void,
+  filter: string,
+  setFilter: (filter: string) => void
+}
+
+export default function ProjectList({ open, setOpen, filter, setFilter } : projectListProps) {
   const [projects, setProjects] = useState(PROJECTS);
 
   useEffect(() => {
@@ -28,7 +35,6 @@ export default function ProjectList({ open, setOpen, filter, setFilter }) {
                 project={project}
                 key={`${filter}-${i}`}
                 index={i}
-                filter={filter}
               />
             ))}
           </>

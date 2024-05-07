@@ -1,4 +1,12 @@
-export default function FilterOption({ setFilter, option, name, filter }) {
+
+interface FilterOptionProps {
+  setFilter: (filter: string) => void;
+  option: string;
+  name: string;
+  filter: string;
+}
+
+export default function FilterOption({ setFilter, option, name, filter } : FilterOptionProps) {
   const handleClick = () => {
     if (filter === option) {
       setFilter("");

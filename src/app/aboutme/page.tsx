@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8">
-      <div className="lg:p-8 lg:mt-10 sm:mt-14">
+      <div className="lg:p-8 lg:mt-4 sm:mt-14">
         <h1 className="md:text-4xl text-3xl text-center text-LightBlue font-mono">
           ABOUT ME
         </h1>
@@ -60,14 +60,19 @@ export default function AboutMe() {
             <br></br>
           </p>
           <div className="p-10 flex flex-row justify-center space-x-1">
-            <a href="resume/JakaPotokar_CV_eng_web.pdf" target="_blank">
+            <a
+              href="/JakaPotokar_CV_eng.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="text-white glowing-underline">
                 Click here to check my CV |
               </p>
             </a>
             <a
-              href="resume/JakaPotokar_CV_eng_web.pdf"
+              href="/JakaPotokar_CV_eng.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className="invert"
             >
               <Image

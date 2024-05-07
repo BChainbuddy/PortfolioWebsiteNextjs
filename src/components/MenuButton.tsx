@@ -29,18 +29,30 @@ export default function MenuButton() {
         }`}
       >
         <div className="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg text-black text-lg">
-          <Link href="/" className={`${pathname === "/" ? "text-white" : ""}`}>
+          <Link
+            href="/"
+            className={`${pathname === "/" ? "text-white" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             Home
           </Link>
           <Link
             href="/mywork"
             className={`${pathname === "/mywork" ? "text-white" : ""} `}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
           >
             My work
           </Link>
           <Link
             href="/skills"
             className={`${pathname === "/skills" ? "text-white" : ""} `}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
           >
             Skills
           </Link>
@@ -49,6 +61,9 @@ export default function MenuButton() {
             className={`${
               pathname === "/aboutme" ? "text-white" : ""
             } font-bold `}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
           >
             About me
           </Link>
@@ -57,6 +72,9 @@ export default function MenuButton() {
             className={`${
               pathname === "/contact" ? "text-white" : ""
             } font-bold `}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
           >
             Contact
           </Link>

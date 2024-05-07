@@ -4,20 +4,41 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MenuButton from "./MenuButton";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [fixedHeader, setFixedHeader] = useState(false);
-
+  const [stickyHeader, setStickyHeader] = useState(false);
   const pathname = usePathname();
-  const elementRef = useRef(null);
-  
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        const isScrolled = window.scrollY > window.innerHeight * 0.05;
+        setStickyHeader(isScrolled);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <div
-        className="z-20 sm:h-[10vh] lg:h-[20vh] flex flex-row justify-between sm:items-center sm:pb-4 pt-4 lg:pb-0 border-bottom-LightBlue lg:border-b-0 sm:bg-teal-950 w-screen lg:bg-transparent"
-        ref={elementRef}
+        className={`sticky top-0 z-20 sm:h-[10vh] lg:h-[10vh] lg:mb-[5vh] lg:mt-[5vh] flex flex-row justify-between sm:items-center sm:pb-4 sm:pt-4 border-bottom-LightBlue sm:bg-teal-950 w-screen ${
+          stickyHeader
+            ? "transition-all duration-300"
+            : "lg:bg-transparent lg:border-b-transparent"
+        }`}
       >
         <div className="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
           <div className="lg:h-12 lg:w-12 sm:h-10 sm:w-10 relative">

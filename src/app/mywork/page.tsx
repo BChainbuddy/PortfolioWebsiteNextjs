@@ -11,8 +11,8 @@ export default function MyWork() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col">
-      <div className="md:p-8 lg:mt-10 sm:mt-14 lg:pb-0">
+    <div className="flex flex-col pb-8">
+      <div className="lg:p-8 lg:mt-4 sm:mt-14">
         <h1 className="text-3xl md:text-4xl text-center text-LightBlue font-mono">
           MY WORK PORTFOLIO
         </h1>

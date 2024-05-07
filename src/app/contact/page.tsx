@@ -17,6 +17,7 @@ export default function Contact() {
                 width={0}
                 height={0}
                 layout="responsive"
+                alt="gmailLogo"
               />
             </div>
             <a href="mailto:jakapotokar50@gmail.com">
@@ -32,6 +33,7 @@ export default function Contact() {
                 width={0}
                 height={0}
                 layout="responsive"
+                alt="linkedInLogo"
               />
             </div>
             <a href="https://www.linkedin.com/in/jaka-potokar-14452627b/">
@@ -47,6 +49,7 @@ export default function Contact() {
                 width={0}
                 height={0}
                 layout="responsive"
+                alt="githubLogo"
               />
             </div>
             <a href="https://github.com/BChainbuddy?tab=repositories">
@@ -64,6 +67,7 @@ export default function Contact() {
             width={0}
             height={0}
             layout="responsive"
+            alt="contactImg"
           />
         </div>
       </div>

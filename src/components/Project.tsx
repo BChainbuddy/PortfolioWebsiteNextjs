@@ -2,7 +2,17 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default function Project({ project, index }) {
+interface projectProps {
+  project: {
+    img_src: string;
+    github_url: string;
+    demo_url?: string; 
+    description: string;
+  };
+  index: number;
+}
+
+export default function Project({ project, index } : projectProps) {
   const [seeProject, setSeeProject] = useState(false);
 
   const { ref, inView } = useInView({
@@ -27,7 +37,7 @@ export default function Project({ project, index }) {
       <div className="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
         <p className="sm:hidden md:flex">
           Hover on picture to see the product
-          <p className="text-sm sm:hidden md:flex">👇</p>
+          <span className="text-sm sm:hidden md:flex">👇</span>
         </p>
       </div>
       <div className="relative group">
@@ -36,7 +46,7 @@ export default function Project({ project, index }) {
             <div className="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none relative">
               <Image
                 src={project.img_src}
-                alt={("Photo of project ", index)}
+                alt={`Photo of project ${index}`}
                 fill
               />
             </div>
@@ -54,7 +64,6 @@ export default function Project({ project, index }) {
                 <a href={project.demo_url} target="_blank">
                   <div
                     className="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center"
-                    target="_blank"
                   >
                     <p>Click to see the demo...</p>
                   </div>

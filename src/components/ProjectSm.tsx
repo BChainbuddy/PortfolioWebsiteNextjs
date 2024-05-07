@@ -1,7 +1,17 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-export default function ProjectSm({ project, index }) {
+interface projectProps {
+  project: {
+    img_src: string;
+    github_url: string;
+    demo_url?: string; 
+    description: string;
+  };
+  index: number;
+}
+
+export default function ProjectSm({ project, index } : projectProps) {
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -17,17 +27,14 @@ export default function ProjectSm({ project, index }) {
       <div className="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
         <p className="sm:hidden md:flex">
           Hover on picture to choose a code file
-          <p className="text-sm sm:hidden md:flex">👇</p>
+          <span className="text-sm sm:hidden md:flex">👇</span>
         </p>
         <div
           className={`sm:flex md:hidden ${
             project.demo_url ? "" : "w-full justify-center items-center"
           }`}
         >
-          <a
-            href={project.github_url}
-            className="flex flex-row space-x-0.5"
-          >
+          <a href={project.github_url} className="flex flex-row space-x-0.5">
             <p>Click here for code</p>
             <span className="h-3 w-3 relative my-auto">
               <Image

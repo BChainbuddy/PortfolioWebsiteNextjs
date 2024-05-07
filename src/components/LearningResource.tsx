@@ -2,6 +2,17 @@
 
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+
+interface learningResourceProps {
+  color: string,
+  borderColor: string,
+  text: string,
+  title: string,
+  url: string,
+  img_src: string,
+  even: boolean
+}
+
 export default function LearningResource({
   color,
   borderColor,
@@ -10,7 +21,7 @@ export default function LearningResource({
   url,
   img_src,
   even,
-}) {
+} : learningResourceProps) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });

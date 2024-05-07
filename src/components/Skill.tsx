@@ -1,10 +1,16 @@
 import Image from "next/image";
 
-export default function Technology({ skill }) {
+interface technologyProps {
+  skill: {
+    img_src: string,
+    name: string
+  }
+}
+
+export default function Technology({ skill } : technologyProps) {
   return (
     <div className="relative group inline-block">
       <div
-        src={skill.img_src}
         className="sm:h-20 sm:w-20 md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl overflow-hidden relative"
       >
         <Image src={skill.img_src} alt={(skill.name, " logo")} fill />

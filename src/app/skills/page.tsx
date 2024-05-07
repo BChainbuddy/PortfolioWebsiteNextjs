@@ -6,8 +6,8 @@ import resources from "../../data/resources.json";
 export default function Skills() {
   return (
     <>
-      <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 p-8">
-        <div className="lg:p-8 lg:mt-10 sm:mt-14">
+      <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 pb-8">
+        <div className="lg:p-8 lg:mt-4 sm:mt-14">
           <h1 className="md:text-4xl sm:text-3xl text-center text-LightBlue font-mono">
             TECHNOLOGIES
           </h1>

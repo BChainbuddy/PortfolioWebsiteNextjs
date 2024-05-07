@@ -43,6 +43,10 @@ body {
   border: 2px solid hsl(169 100% 41%);
 }
 
+.border-bottom-LightBlue {
+  border-bottom: 2px solid hsl(169 100% 41%);
+}
+
 .bg-DarkBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
@@ -131,7 +135,7 @@ body {
 }
 
 .menuClose {
-  transition: all 900ms 50ms ease;
+  transition: all 900ms;
   max-height: 0;
 }
 
