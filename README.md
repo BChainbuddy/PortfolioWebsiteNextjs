@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BChainBuddy / Jaka Potokar's Portfolio Website
 
-## Getting Started
+Welcome to the repository for my personal portfolio website hosted at [jakapotokar.xyz](https://jakapotokar.xyz). This site is built using Next.js, TypeScript, and TailwindCSS and showcases various aspects of my professional and personal development.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Projects**: Explore the projects I've worked on, highlighting my skills and professional interests.
+- **Skills**: A detailed overview of my technical and soft skills.
+- **About Me**: Learn more about my background, education, and professional journey.
+- **Contact Information**: Different ways to reach out to me for professional inquiries or collaborations.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework that enables functionality such as server-side rendering and generating static websites.
+- **TypeScript**: Adds type safety to the project, ensuring more robust code and enhancing development experience.
+- **TailwindCSS**: Utilized for its utility-first approach that enables custom and responsive design with ease.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Viewing the Website
 
-## Learn More
+The portfolio is live at [jakapotokar.xyz](https://jakapotokar.xyz), where you can see all the content mentioned above. Feel free to explore the site to get a better understanding of my capabilities and interests.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you wish to contact me for professional purposes or inquiries, please visit the contact section of the website for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for your interest in my portfolio!
