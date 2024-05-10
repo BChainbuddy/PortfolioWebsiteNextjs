@@ -61,7 +61,7 @@ export default function AboutMe() {
           </p>
           <div className="p-10 flex flex-row justify-center space-x-1">
             <a
-              href="/JakaPotokar_CV_eng.pdf"
+              href="/JakaPotokar-CV-Eng.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -70,7 +70,7 @@ export default function AboutMe() {
               </p>
             </a>
             <a
-              href="/JakaPotokar_CV_eng.pdf"
+              href="/JakaPotokar-CV-Eng.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="invert"
@@ -132,13 +132,13 @@ export default function AboutMe() {
             <br></br>
           </p>
           <div className="p-2 rounded-2xl flex flex-row justify-center space-x-1">
-            <a href="resume/JakaPotokar_CV_eng_web.pdf" target="_blank">
+            <a href="/JakaPotokar-CV-Eng.pdf" target="_blank">
               <p className=" text-white glowing-underline">
                 Click here to check my CV
               </p>
             </a>
             <a
-              href="/resume/JakaPotokar_CV_eng_web.pdf"
+              href="/JakaPotokar-CV-Eng.pdf"
               target="_blank"
               className="mt-1 invert"
             >

@@ -9,7 +9,7 @@
     {
         "description": "Seadex, a decentralized exchange (DEX) powered by an AMM system, facilitates token swapping within liquidity pools. Users can earn yield by investing and launch new pools. Operating in Sepolia, it's a user-friendly gateway to DeFi.",
         "github_url": "https://github.com/BChainbuddy/decentralizedExchange",
-        "demo_url": "https://seaswap-jakas-projects-0034aa8f.vercel.app/",
+        "demo_url": "https://seadex.vercel.app/",
         "img_src": "/dexScreenshot.png",
         "category": ["javascript", "nextjs"]
     },
