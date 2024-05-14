@@ -54,6 +54,7 @@ export default function Home() {
               height={0}
               fill
               alt="programmingEmoji"
+              className="img-shadow"
             />
           </div>
         </div>

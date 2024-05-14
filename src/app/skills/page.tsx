@@ -8,7 +8,7 @@ export default function Skills() {
     <>
       <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 pb-8">
         <div className="lg:p-8 lg:mt-4 sm:mt-14">
-          <h1 className="md:text-4xl sm:text-3xl text-center text-LightBlue font-mono">
+          <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
             TECHNOLOGIES
           </h1>
         </div>
@@ -66,7 +66,7 @@ export default function Skills() {
       </div>
       <div className="sm:hidden lg:flex flex-col space-y-16 p-8 pb-44">
         <div className="lg:p-8 lg:mt-10 sm:mt-14">
-          <h1 className="text-4xl text-center text-LightBlue font-mono">
+          <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
             CERTIFICATES / LEARNING RESOURCES
           </h1>
         </div>
@@ -104,7 +104,7 @@ export default function Skills() {
             text={resources[3].text}
             title={resources[3].name}
             url={resources[3].url}
-            img_src="/moralisLogo.png"
+            img_src="/Moralis.webp"
             even={true}
           />
           <LearningResource

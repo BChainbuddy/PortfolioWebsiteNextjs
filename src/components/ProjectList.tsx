@@ -48,7 +48,7 @@ export default function ProjectList({ open, setOpen, filter, setFilter } : proje
       </div>
       <div className="view-start sm:hidden lg:flex justify-center mt-6 lg:p-12">
         <button
-          className="border-LightBlue border-8 hover:bg-teal-600 active:border-teal-900 rounded-lg w-52 text-center shadow-md shadow-cyan-400 active:shadow-none active:mt-1"
+          className="project-shadow darkGreenBackground border-LightBlue border-8 hover:bg-teal-600 active:border-teal-900 rounded-lg w-52 text-center active:shadow-none active:mt-1"
           onClick={() => {
             setOpen(!open);
             setFilter("");

@@ -4,12 +4,12 @@ export default function AboutMe() {
   return (
     <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8">
       <div className="lg:p-8 lg:mt-4 sm:mt-14">
-        <h1 className="md:text-4xl text-3xl text-center text-LightBlue font-mono">
+        <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
           ABOUT ME
         </h1>
       </div>
       <div className="lg:flex flex-row justify-center space-x-32 sm:hidden">
-        <div className="backdrop-blur-2xl w-4/12 rounded-3xl border-LightBlue p-3">
+        <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue p-3">
           <p className="text-justify text-xl text-white m-3 indent-8 ">
             I'm Jaka, a Business Informatics Master's student proudly
             representing Slovenia.<br></br>

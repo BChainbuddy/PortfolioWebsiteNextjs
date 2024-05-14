@@ -257,13 +257,13 @@ body {
 
 .start-resource-even {
   transform: translateX(40px) translateY(30px);
-  transition: 1000ms;
+  transition: transform 1000ms, opacity 300ms;
   opacity: 0;
 }
 
 .start-resource-odd {
   transform: translateX(-40px) translateY(30px);
-  transition: 1000ms;
+  transition: transform 1000ms, opacity 300ms;
   opacity: 0;
 }
 
@@ -275,19 +275,19 @@ body {
 .project1 {
   transform: translateY(100px);
   opacity: 0;
-  transition: all 1000ms 100ms;
+  transition: transform 1000ms 100ms, opacity 1000ms 100ms;
 }
 
 .project2 {
   transform: translateY(100px);
   opacity: 0;
-  transition: all 1000ms 300ms;
+  transition: transform 1000ms 300ms, opacity 1000ms 300ms;
 }
 
 .project3 {
   transform: translateY(100px);
   opacity: 0;
-  transition: all 1000ms 500ms;
+  transition: transform 1000ms 500ms, opacity 1000ms 500ms;
 }
 
 .project-end {
@@ -295,19 +295,23 @@ body {
   opacity: 1;
 }
 
-.start-resource-even {
-  transform: translateX(40px) translateY(30px);
-  transition: 1000ms;
-  opacity: 0;
+.img-shadow {
+  filter: drop-shadow(0 0 10rem hsl(169 100% 41%));
 }
 
-.start-resource-odd {
-  transform: translateX(-40px) translateY(30px);
-  transition: 1000ms;
-  opacity: 0;
+.project-shadow {
+  transition: all 250ms;
+  box-shadow: 0 0 1rem hsl(169 100% 41%);
 }
 
-.end-resource {
-  opacity: 1;
-  transform: translateX(0px) translateY(0px);
+.skill-shadow {
+  box-shadow: 0 0 0.75rem hsl(169 100% 41%);
+}
+
+.darkGreenBackground {
+  background-color: #061a1b98;
+}
+
+.filterTransition {
+  transition: height 1000ms;
 }

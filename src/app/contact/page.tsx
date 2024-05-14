@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="sm:items-center sm:flex-grow lg:flex-1 flex flex-row justify-center lg:space-x-28">
       <div className="space-y-10">
         <div className="">
-          <h1 className="text-end lg:text-end md:text-center sm:text-center lg:mr-12 text-3xl md:text-4xl text-LightBlue font-mono">
+          <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
             CONTACT ME
           </h1>
         </div>
@@ -68,6 +68,7 @@ export default function Contact() {
             height={0}
             layout="responsive"
             alt="contactImg"
+            className="img-shadow"
           />
         </div>
       </div>

@@ -43,7 +43,7 @@ export default function Project({ project, index } : projectProps) {
       <div className="relative group">
         <div>
           <div>
-            <div className="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none relative">
+            <div className="h-48 w-full project-shadow group-hover:shadow-none relative">
               <Image
                 src={project.img_src}
                 alt={`Photo of project ${index}`}
@@ -75,7 +75,7 @@ export default function Project({ project, index } : projectProps) {
           </div>
         </div>
       </div>
-      <div className="backdrop-blur-lg border-LightBlue rounded-xl">
+      <div className="backdrop-blur-lg darkGreenBackground border-LightBlue rounded-xl">
         <p className="text-justify text-white  m-3">{project.description}</p>
       </div>
     </div>

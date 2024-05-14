@@ -42,7 +42,7 @@ export default function LearningResource({
       )}
 
       <div
-        className={`text-justify w-1/2 backdrop-blur-3xl ${borderColor} border-2 rounded-2xl py-5 px-8 space-y-3`}
+        className={`text-justify w-1/2 backdrop-blur-3xl ${borderColor} border-2 rounded-2xl py-5 px-8 space-y-3 darkGreenBackground`}
       >
         <h2 className={`text-center ${color} text-2xl font-mono`}>{title}</h2>
         <p className="text-white">

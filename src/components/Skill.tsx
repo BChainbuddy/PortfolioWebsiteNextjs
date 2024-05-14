@@ -11,7 +11,7 @@ export default function Technology({ skill } : technologyProps) {
   return (
     <div className="relative group inline-block">
       <div
-        className="sm:h-20 sm:w-20 md:h-24 md:w-24 shadow-lg shadow-cyan-500/50 rounded-xl overflow-hidden relative"
+        className="sm:h-20 sm:w-20 md:h-24 md:w-24 skill-shadow rounded-xl overflow-hidden relative"
       >
         <Image src={skill.img_src} alt={(skill.name, " logo")} fill />
       </div>
