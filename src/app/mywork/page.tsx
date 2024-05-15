@@ -28,7 +28,7 @@ export default function MyWork() {
           <button
             id="filterButton"
             className={`md:mr-28 border-LightBlue border-8 w-36 text-center hover:bg-teal-600 ${
-              openFilter ? "rounded-t-lg" : "rounded-lg"
+              openFilter ? "rounded-t-lg transitionFilterButtonOpen" : "rounded-lg transitionFilterButtonClose"
             }`}
             onClick={() => {
               setOpenFilter(!openFilter);
@@ -38,9 +38,9 @@ export default function MyWork() {
           </button>
           <div
             id="filterMenu"
-            className={`${
-              openFilter ? "flex" : "hidden"
-            } flex-col absolute border-LightBlue border-8 rounded-b-lg w-36 bg-teal-900 z-10 py-3`}
+            className={`overflow-hidden flex flex-col absolute rounded-b-lg w-36 bg-teal-900 z-10 transitionFilterMenu ${
+              openFilter ? "filterMenuOpen" : "filterMenuClose"
+            } `}
           >
             <FilterOption
               name={"Javascript"}
@@ -86,6 +86,7 @@ export default function MyWork() {
         setOpen={setOpen}
         filter={filter}
         setFilter={setFilter}
+        setOpenFilter={setOpenFilter}
       />
       <div className="sm:flex lg:hidden sm:mt-20 md:mt-0 sm:flex-col sm:pb-20 md:pb-10 md:px-16 md:pt-16 md:py-10 sm:space-y-20 md:space-y-20 sm:items-center md:items-center">
         {PROJECTS.map((project, i) => (

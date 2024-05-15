@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutMe() {
   return (
@@ -11,52 +12,24 @@ export default function AboutMe() {
       <div className="lg:flex flex-row justify-center space-x-32 sm:hidden">
         <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue p-3">
           <p className="text-justify text-xl text-white m-3 indent-8 ">
-            I'm Jaka, a Business Informatics Master's student proudly
-            representing Slovenia.<br></br>
+            Hello! I’m Jaka , a full-stack developer from Slovenia with a keen interest in both web2 and web3 technologies. Currently pursuing a master’s in business informatics at the School of Economics and Business Ljubljana, I combine solid business knowledge with technical expertise to create impactful digital solutions.<br></br>
             <br></br>
-            My journey into the captivating world of blockchain technologies
-            began back in 2019, ignited by my initial investment in Bitcoin.
-            Since then, my passion for this transformative technology has only
-            grown stronger, propelling me on a relentless quest for knowledge
-            and innovation.<br></br>
+            Over the past 1.5 years, I have immersed myself in the development world, gaining hands-on experience and a deep understanding of various programming languages and frameworks. My educational journey is complemented by professional certifications, including a prestigious Full Stack Developer Career Path <Link href={"https://www.codecademy.com/profiles/JakaPotokar/certificates/ffd0f42cce1a44e9a0108b365047a0a6"} className="text-cyan-400 hover:text-cyan-600 underline" target="_blank">certificate from Codecademy</Link>. This certification, among others, stands testament to my dedication and capability in tackling diverse and complex technical challenges.<br></br>
             <br></br>
-            What initially started as a curious investment soon transformed into
-            a deep exploration of blockchain's intricacies and underlying
-            concepts. With time, my curiosity evolved into a burning desire to
-            actively contribute to the blockchain ecosystem through my own
-            projects.<br></br>
+            In the realm of development, I thrive on learning and employing cutting-edge technologies. My portfolio spans dynamic e-commerce platforms to sophisticated decentralized applications, showcasing my ability to handle complex technical tasks. My enthusiasm for the latest tech innovations keeps me continuously evolving and at the forefront of the industry.<br></br>
             <br></br>
-            My journey began with the Moralis Academy, formerly known as Ivan On
-            Tech Academy. Through these courses, I honed my JavaScript skills
-            and learned how to harness the power of Binance APIs to extract
-            crucial data. This newfound expertise led me to the world of trading
-            bots, where I crafted numerous programmatic strategies. Yet, I
-            yearned for more.<br></br>
-            <br></br>
-            This yearning led me to Solidity development. I scoured the vast
-            expanse of the internet and
+            Outside of coding, I am an avid sports enthusiast and fitness buff, particularly
           </p>
         </div>
         <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue">
           <p className="text-justify text-xl text-white m-3 p-3">
-            immersed myself in Reddit groups, determined to unearth the most
-            valuable insights into blockchain development. My turning point came
-            when I discovered an exceptional 32-hour course led by the
-            distinguished Patrick Collins. This course equipped me with a
-            formidable understanding of Solidity development and the
-            indispensable tool, Hardhat.<br></br>
+            passionate about basketball. This energy extends into my personal pursuits where I enjoy exploring the world and discovering new things. Whether it’s staying updated with the latest tech innovations or delving into books on personal growth, I am always learning.<br></br>
             <br></br>
-            Hungry for knowledge, I wasted no time and swiftly completed the
-            CryptoZombies course. Armed with the skills I had acquired, I
-            finally felt ready to embark on my own projects. Today, I stand
-            before you with about a year of coding experience under my belt,
-            having meticulously crafted a diverse portfolio of projects that
-            showcase my passion for innovation and blockchain technology.
+            I am known for my devotion and reliability, consistently standing firm in my commitments. I thrive on setting myself challenges and overcoming them, which aligns with my professional work where I am dedicated to delivering projects with precision and passion.<br></br>
             <br></br>
+            I am also a social individual who loves connecting with people from diverse backgrounds. Every interaction is an opportunity to learn and grow together, which is why I value my time collaborating with others, whether in hackathons or team projects.<br></br>
             <br></br>
-            Welcome to my blockchain adventure! Join me as I continue to
-            explore, innovate, and contribute to the ever-evolving world of
-            blockchain technology.<br></br>
+            Feel free to connect with me or explore my work further through my site. Let’s collaborate to create something exceptional!<br></br>
             <br></br>
           </p>
           <div className="p-10 flex flex-row justify-center space-x-1">
@@ -86,49 +59,21 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="flex justify-center lg:hidden">
-        <div className="backdrop-blur-2xl sm:w-11/12 md:w-8/12 rounded-3xl border-LightBlue sm:mb-16 pb-10">
+        <div className="darkGreenBackground sm:w-11/12 md:w-8/12 rounded-3xl border-LightBlue sm:mb-16 pb-10">
           <p className="text-justify md:text-xl text-base  text-white m-3 md:m-4 indent-8 ">
-            Greetings, I'm Jaka, a Business Informatics Master's student proudly
-            representing Slovenia.<br></br>
+            Hello! I’m Jaka , a full-stack developer from Slovenia with a keen interest in both web2 and web3 technologies. Currently pursuing a master’s in business informatics at the School of Economics and Business Ljubljana, I combine solid business knowledge with technical expertise to create impactful digital solutions.<br></br>
             <br></br>
-            My journey into the captivating world of blockchain technologies
-            began back in 2019, ignited by my initial investment in Bitcoin.
-            Since then, my passion for this transformative technology has only
-            grown stronger, propelling me on a relentless quest for knowledge
-            and innovation.<br></br>
+            Over the past 1.5 years, I have immersed myself in the development world, gaining hands-on experience and a deep understanding of various programming languages and frameworks. My educational journey is complemented by professional certifications, including a prestigious Full Stack Developer Career Path <Link href={"https://www.codecademy.com/profiles/JakaPotokar/certificates/ffd0f42cce1a44e9a0108b365047a0a6"} className="text-cyan-400 hover:text-cyan-600 underline" target="_blank">certificate from Codecademy</Link>. This certification, among others, stands testament to my dedication and capability in tackling diverse and complex technical challenges.<br></br>
             <br></br>
-            What initially started as a curious investment soon transformed into
-            a deep exploration of blockchain's intricacies and underlying
-            concepts. With time, my curiosity evolved into a burning desire to
-            actively contribute to the blockchain ecosystem through my own
-            projects.<br></br>
+            In the realm of development, I thrive on learning and employing cutting-edge technologies. My portfolio spans dynamic e-commerce platforms to sophisticated decentralized applications, showcasing my ability to handle complex technical tasks. My enthusiasm for the latest tech innovations keeps me continuously evolving and at the forefront of the industry.<br></br>
             <br></br>
-            My journey began with the Moralis Academy, formerly known as Ivan On
-            Tech Academy. Through these courses, I honed my JavaScript skills
-            and learned how to harness the power of Binance APIs to extract
-            crucial data. This newfound expertise led me to the world of trading
-            bots, where I crafted numerous programmatic strategies. Yet, I
-            yearned for more.<br></br>
+            Outside of coding, I am an avid sports enthusiast and fitness buff, particularly passionate about basketball. This energy extends into my personal pursuits where I enjoy exploring the world and discovering new things. Whether it’s staying updated with the latest tech innovations or delving into books on personal growth, I am always learning.<br></br>
             <br></br>
-            This yearning led me to Solidity development. I scoured the vast
-            expanse of the internet and immersed myself in Reddit groups,
-            determined to unearth the most valuable insights into blockchain
-            development. My turning point came when I discovered an exceptional
-            32-hour course led by the distinguished Patrick Collins. This course
-            equipped me with a formidable understanding of Solidity development
-            and the indispensable tool, Hardhat.<br></br>
+            I am known for my devotion and reliability, consistently standing firm in my commitments. I thrive on setting myself challenges and overcoming them, which aligns with my professional work where I am dedicated to delivering projects with precision and passion.<br></br>
             <br></br>
-            Hungry for knowledge, I wasted no time and swiftly completed the
-            CryptoZombies course. Armed with the skills I had acquired, I
-            finally felt ready to embark on my own projects. Today, I stand
-            before you with about a year of coding experience under my belt,
-            having meticulously crafted a diverse portfolio of projects that
-            showcase my passion for innovation and blockchain technology.
+            I am also a social individual who loves connecting with people from diverse backgrounds. Every interaction is an opportunity to learn and grow together, which is why I value my time collaborating with others, whether in hackathons or team projects.<br></br>
             <br></br>
-            <br></br>
-            Welcome to my blockchain adventure! Join me as I continue to
-            explore, innovate, and contribute to the ever-evolving world of
-            blockchain technology.<br></br>
+            Feel free to connect with me or explore my work further through my site. Let’s collaborate to create something exceptional!<br></br>
             <br></br>
           </p>
           <div className="p-2 rounded-2xl flex flex-row justify-center space-x-1">

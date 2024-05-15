@@ -42,7 +42,6 @@ export default function Project({ project, index } : projectProps) {
       </div>
       <div className="relative group">
         <div>
-          <div>
             <div className="h-48 w-full project-shadow group-hover:shadow-none relative">
               <Image
                 src={project.img_src}
@@ -55,7 +54,7 @@ export default function Project({ project, index } : projectProps) {
                 <div
                   className={`${
                     project.demo_url ? "w-1/2" : "w-full"
-                  } opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center`}
+                  } text-BlueGreen darkGreenBackground opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center`}
                 >
                   <p>Click to see the source code...</p>
                 </div>
@@ -63,7 +62,7 @@ export default function Project({ project, index } : projectProps) {
               {project.demo_url ? (
                 <a href={project.demo_url} target="_blank">
                   <div
-                    className="w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center"
+                    className="text-BlueGreen darkGreenBackground w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center"
                   >
                     <p>Click to see the demo...</p>
                   </div>
@@ -72,7 +71,6 @@ export default function Project({ project, index } : projectProps) {
                 <></>
               )}
             </div>
-          </div>
         </div>
       </div>
       <div className="backdrop-blur-lg darkGreenBackground border-LightBlue rounded-xl">

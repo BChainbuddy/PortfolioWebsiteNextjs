@@ -11,7 +11,7 @@ export default function MenuButton() {
     <>
       <button
         id="menu-btn"
-        className={`block hamburger sm:mt-3 mr-16 lg:hidden focus:outline-none ${
+        className={`block hamburger sm:mt-3 md:mr-16 sm:mr-8 lg:hidden focus:outline-none ${
           menuOpen ? "open" : ""
         }`}
         onClick={() => {
@@ -31,7 +31,7 @@ export default function MenuButton() {
         <div className="border-LightBlue border-x-2 border-b-2 flex-col flex items-center py-8 space-y-6 font-bold text-DarkBlue bg-teal-500 sm:self-center drop-shadow-md rounded-b-lg text-black text-lg">
           <Link
             href="/"
-            className={`${pathname === "/" ? "text-white" : ""}`}
+            className={`${pathname === "/" ? "text-white" : "active:text-white"}`}
             onClick={() => {
               setMenuOpen(false);
             }}
@@ -40,7 +40,7 @@ export default function MenuButton() {
           </Link>
           <Link
             href="/mywork"
-            className={`${pathname === "/mywork" ? "text-white" : ""} `}
+            className={`${pathname === "/mywork" ? "text-white" : "active:text-white"} `}
             onClick={() => {
               setMenuOpen(false);
             }}
@@ -49,7 +49,7 @@ export default function MenuButton() {
           </Link>
           <Link
             href="/skills"
-            className={`${pathname === "/skills" ? "text-white" : ""} `}
+            className={`${pathname === "/skills" ? "text-white" : "active:text-white"} `}
             onClick={() => {
               setMenuOpen(false);
             }}
@@ -59,7 +59,7 @@ export default function MenuButton() {
           <Link
             href="/aboutme"
             className={`${
-              pathname === "/aboutme" ? "text-white" : ""
+              pathname === "/aboutme" ? "text-white" : "active:text-white"
             } font-bold `}
             onClick={() => {
               setMenuOpen(false);
@@ -70,7 +70,7 @@ export default function MenuButton() {
           <Link
             href="/contact"
             className={`${
-              pathname === "/contact" ? "text-white" : ""
+              pathname === "/contact" ? "text-white" : "active:text-white"
             } font-bold `}
             onClick={() => {
               setMenuOpen(false);

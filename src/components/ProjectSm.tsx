@@ -70,7 +70,7 @@ export default function ProjectSm({ project, index } : projectProps) {
       </div>
       <img
         src={project.img_src}
-        className="h-48 w-full shadow-lg shadow-cyan-500/50 group-hover:shadow-none"
+        className="h-48 w-full project-shadow"
       />
       <div className="backdrop-blur-lg border-LightBlue rounded-xl">
         <p className="text-justify text-white m-3">{project.description}</p>

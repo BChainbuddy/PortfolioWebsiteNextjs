@@ -312,9 +312,52 @@ body {
 }
 
 .darkGreenBackground {
-  background-color: #061a1b98;
+  background-color: #061a1b99;
+  -webkit-backdrop-filter: blur(
+    10px
+  ); /* Add this line first, it fixes blur for Safari*/
+  backdrop-filter: blur(10px); /* This line activates blur*/
 }
 
 .filterTransition {
   transition: height 1000ms;
+}
+
+.skill:hover {
+  background-color: #061a1b98;
+  -webkit-backdrop-filter: blur(
+    10px
+  ); /* Add this line first, it fixes blur for Safari*/
+  backdrop-filter: blur(10px); /* This line activates blur*/
+}
+
+.text-BlueGreen {
+  color: hsl(169 100% 41%);
+}
+
+.transitionFilterMenu {
+}
+
+.transitionFilterButtonOpen {
+  transition: all 100ms;
+}
+
+.transitionFilterButtonClose {
+  transition: all 100ms 490ms;
+}
+
+.filterMenuOpen {
+  height: 200px;
+  border-left: 2px solid hsl(169 100% 41%);
+  border-right: 2px solid hsl(169 100% 41%);
+  border-bottom: 2px solid hsl(169 100% 41%);
+  transition: height 500ms 100ms, border 10ms 100ms;
+}
+
+.filterMenuClose {
+  height: 0px;
+  border-left: 2px solid none;
+  border-top: 2px solid none;
+  border-bottom: 2px solid none;
+  transition: height 500ms, border 10ms 480ms;
 }

@@ -7,9 +7,10 @@ interface projectListProps {
   setOpen: (open: boolean) => void,
   filter: string,
   setFilter: (filter: string) => void
+  setOpenFilter: (openFilter: boolean) => void
 }
 
-export default function ProjectList({ open, setOpen, filter, setFilter } : projectListProps) {
+export default function ProjectList({ open, setOpen, filter, setFilter, setOpenFilter } : projectListProps) {
   const [projects, setProjects] = useState(PROJECTS);
 
   useEffect(() => {
@@ -52,6 +53,7 @@ export default function ProjectList({ open, setOpen, filter, setFilter } : proje
           onClick={() => {
             setOpen(!open);
             setFilter("");
+            setOpenFilter(false)
           }}
         >
           <div className="relative group">

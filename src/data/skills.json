@@ -4,7 +4,7 @@
         "img_src": "/react3.png"
     }, 
     {
-        "name": "TAILWINDCSS",
+        "name": "TAILWIND",
         "img_src": "/Tailwindcss.png"
     },
     {
@@ -47,6 +47,10 @@
     {
         "name": "EXPRESSJS",
         "img_src": "/expressjs.png"
+    },
+    {
+        "name": "GOLANG",
+        "img_src": "/GoLogo.png"
     }],
     "database":[     
     {
@@ -56,5 +60,9 @@
     {
         "name": "GRAPHQL",
         "img_src": "/graphql.png"
+    },
+    {
+        "name": "MONGODB",
+        "img_src": "/MongoDBLogo.png"
     }]
 }

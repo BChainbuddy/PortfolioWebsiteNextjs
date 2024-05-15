@@ -17,7 +17,7 @@ export default function FilterOption({ setFilter, option, name, filter } : Filte
 
   return (
     <button
-      className="flex flex-row my-1 hover:bg-cyan-200 transition duration-200"
+      className="flex flex-row hover:bg-cyan-200 transition duration-200 my-1"
       onClick={handleClick}
     >
       <div className="w-2/3">
