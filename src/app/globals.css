@@ -7,13 +7,6 @@ body::-webkit-scrollbar-thumb {
   background: lightblue; /* Adjust this to your preferred scrollbar color */
 }
 
-/* Hide scrollbar track and buttons */
-body::-webkit-scrollbar {
-  width: 6px; /* Adjust the width to your preference */
-  height: 6px;
-  background: transparent; /* Hide scrollbar track */
-}
-
 body {
   background-image: url("../../public/backgroundBlurred.png");
   background-size: cover;
@@ -296,7 +289,17 @@ body {
 }
 
 .img-shadow {
-  filter: drop-shadow(0 0 10rem hsl(169 100% 41%));
+  animation: animateShadow 1500ms forwards 300ms;
+}
+
+@keyframes animateShadow {
+  0% {
+    filter: drop-shadow(0 0 0rem hsl(169 100% 41%));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10rem hsl(169 100% 41%));
+  }
 }
 
 .project-shadow {

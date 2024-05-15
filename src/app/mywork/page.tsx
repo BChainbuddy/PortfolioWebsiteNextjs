@@ -11,7 +11,7 @@ export default function MyWork() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col pb-8">
+    <div className="flex flex-col pb-8 overflow-hidden">
       <div className="lg:p-8 lg:mt-4 sm:mt-14">
         <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
           MY WORK PORTFOLIO

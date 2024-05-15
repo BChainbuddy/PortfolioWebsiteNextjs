@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8">
+    <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8 overflow-hidden">
       <div className="lg:p-8 lg:mt-4 sm:mt-14">
         <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
           ABOUT ME
@@ -37,7 +37,7 @@ export default function AboutMe() {
             expanse of the internet and
           </p>
         </div>
-        <div className="backdrop-blur-2xl w-4/12 rounded-3xl border-LightBlue">
+        <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue">
           <p className="text-justify text-xl text-white m-3 p-3">
             immersed myself in Reddit groups, determined to unearth the most
             valuable insights into blockchain development. My turning point came
