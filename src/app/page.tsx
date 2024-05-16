@@ -15,10 +15,12 @@ export default function Home() {
                 <span className="inline-block sm:h-14 sm:w-14 md:h-20 md:w-20 relative">
                   <Image
                     src="/1F44B.svg"
-                    width={0}
-                    height={0}
+                    sizes="100%"
                     fill
                     alt="wavingEmoji"
+                    style={{
+                      objectFit: 'cover',
+                    }}
                   />
                 </span>
                 , MY
@@ -50,11 +52,13 @@ export default function Home() {
           <div className="lg:h-80 lg:w-80 md:h-60 md:w-60 relative">
             <Image
               src="/man-technologist-light-skin-tone-svgrepo-com.svg"
-              width={0}
-              height={0}
+              sizes="100%"
               fill
               alt="programmingEmoji"
               className="img-shadow"
+              style={{
+                objectFit: 'cover',
+              }}
             />
           </div>
         </div>

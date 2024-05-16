@@ -8,13 +8,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-image: url("../../public/backgroundBlurred.png");
-  background-size: cover;
+  position: relative;
   margin: 0; /* Remove any default margins */
   padding: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; /* This ensures that the background remains fixed when scrolling */
   min-height: 100vh; /* Set minimum height to 100% of the viewport height */
 }
 
@@ -203,19 +199,19 @@ body {
 .homepage-start1 {
   transform: translateY(35px);
   opacity: 0;
-  animation: animateHomePage 1000ms forwards 300ms;
+  animation: animateHomePage 1000ms forwards 500ms;
 }
 
 .homepage-start2 {
   transform: translateY(35px);
   opacity: 0;
-  animation: animateHomePage 1000ms forwards 500ms;
+  animation: animateHomePage 1000ms forwards 700ms;
 }
 
 .homepage-start3 {
   transform: translateY(35px);
   opacity: 0;
-  animation: animateHomePage 1000ms forwards 700ms;
+  animation: animateHomePage 1000ms forwards 900ms;
 }
 
 @keyframes animateHomePage {
@@ -360,4 +356,20 @@ body {
   border-top: 2px solid none;
   border-bottom: 2px solid none;
   transition: height 500ms, border 10ms 480ms;
+}
+
+#backgroundPicture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #061a1b;
+}
+
+#content {
+  position: relative;
+  z-index: 9;
+  flex: 1;
 }

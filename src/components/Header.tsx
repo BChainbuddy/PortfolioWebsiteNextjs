@@ -42,7 +42,11 @@ export default function Header() {
       >
         <div className="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
           <div className="lg:h-12 lg:w-12 sm:h-10 sm:w-10 relative">
-            <Image src="/jakapLogoTransparent.png" alt="logo" fill />
+            <Image src="/jakapLogoTransparent.png" alt="logo" sizes="100%" fill         
+              style={{
+                objectFit: 'cover',
+              }}
+            />
           </div>
           <p className="sm:self-center cursor-default text-3xl font-thin font-mono text-transparent bg-clip-text custom-gradient-left">
             JAKA

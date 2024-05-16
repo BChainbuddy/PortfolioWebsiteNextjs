@@ -47,6 +47,10 @@ export default function Project({ project, index } : projectProps) {
                 src={project.img_src}
                 alt={`Photo of project ${index}`}
                 fill
+                sizes="100%"
+                style={{
+                  objectFit: 'cover',
+                }}
               />
             </div>
             <div className="md:flex sm:hidden">

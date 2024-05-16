@@ -35,7 +35,7 @@ export default function LearningResource({
     >
       {even ? (
         <div className="w-1/2 rounded-2xl overflow-hidden relative">
-          <Image src={img_src} alt={title} fill />
+          <Image src={img_src} alt={title} fill sizes="100%" priority />
         </div>
       ) : (
         <></>
@@ -58,7 +58,11 @@ export default function LearningResource({
         <></>
       ) : (
         <div className="w-1/2 rounded-2xl overflow-hidden relative">
-          <Image src={img_src} alt={title} fill />
+          <Image src={img_src} alt={title} sizes="100%" fill 
+            style={{
+              objectFit: 'cover',
+            }}
+          />
         </div>
       )}
     </article>

@@ -40,6 +40,8 @@ export default function ProjectSm({ project, index } : projectProps) {
               <Image
                 src="/linkclick.png"
                 className="invert"
+                sizes="100%"
+                priority
                 fill
                 alt="clickPhoto"
               />
@@ -58,6 +60,10 @@ export default function ProjectSm({ project, index } : projectProps) {
                 <Image
                   src="/linkclick.png"
                   className="invert"
+                  sizes="100%"
+                  style={{
+                    objectFit: 'cover',
+                  }}
                   fill
                   alt="clickPhoto"
                 />
@@ -68,10 +74,15 @@ export default function ProjectSm({ project, index } : projectProps) {
           <></>
         )}
       </div>
-      <img
-        src={project.img_src}
-        className="h-48 w-full project-shadow"
-      />
+      <div className="h-48 w-full project-shadow relative">      
+        <Image
+          src={project.img_src}
+          alt={`Photo of project ${index}`}
+          fill
+          sizes="100%"
+          priority
+        />
+      </div>
       <div className="backdrop-blur-lg border-LightBlue rounded-xl">
         <p className="text-justify text-white m-3">{project.description}</p>
       </div>

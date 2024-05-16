@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="sm:items-center sm:flex-grow lg:flex-1 flex flex-row justify-center lg:space-x-28">
+    <div className="sm:items-center lg:h-[80vh] sm:h-[90vh] flex flex-row justify-center lg:space-x-28">
       <div className="space-y-10">
         <div className="">
           <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
@@ -11,13 +11,14 @@ export default function Contact() {
         </div>
         <div className="space-y-8">
           <div className="flex flex-row items-center space-x-4 contact1">
-            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12">
+            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12 relative">
               <Image
                 src="/gmail-icon-509x512-ikquhn8l.png"
-                width={0}
-                height={0}
-                layout="responsive"
+                fill
                 alt="gmailLogo"
+                style={{
+                  objectFit: 'cover'
+                }}
               />
             </div>
             <a href="mailto:jakapotokar50@gmail.com">
@@ -27,13 +28,14 @@ export default function Contact() {
             </a>
           </div>
           <div className="flex flex-row items-center space-x-4 contact2">
-            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12">
+            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12 relative">
               <Image
                 src="/linkedin-icon-1024x1024-z5dvl47c.png"
-                width={0}
-                height={0}
-                layout="responsive"
+                fill
                 alt="linkedInLogo"
+                style={{
+                  objectFit: 'cover',
+                }}
               />
             </div>
             <a href="https://www.linkedin.com/in/jaka-potokar-14452627b/">
@@ -43,13 +45,14 @@ export default function Contact() {
             </a>
           </div>
           <div className="flex flex-row items-center space-x-4 contact3">
-            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12 invert">
+            <div className="md:w-16 md:h-16 sm:h-12 sm:w-12 invert relative">
               <Image
                 src="/githubLogoForBackground.jpg"
-                width={0}
-                height={0}
-                layout="responsive"
+                fill
                 alt="githubLogo"
+                style={{
+                  objectFit: 'cover',
+                }}
               />
             </div>
             <a href="https://github.com/BChainbuddy?tab=repositories">
@@ -61,12 +64,11 @@ export default function Contact() {
         </div>
       </div>
       <div className="md:p-8">
-        <div className="w-80 h-80 lg:flex md:hidden sm:hidden">
+        <div className="lg:flex md:hidden sm:hidden relative">
           <Image
             src="/contactmeimg5.png"
-            width={0}
-            height={0}
-            layout="responsive"
+            width={320}
+            height={320}
             alt="contactImg"
             className="img-shadow"
           />

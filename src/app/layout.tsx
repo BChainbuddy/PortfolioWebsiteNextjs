@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Jaka's Portfolio",
@@ -16,7 +17,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`flex flex-col`}>
         <Header />
-        {children}</body>
+        <div id="content">{children}</div>
+        <div id="backgroundPicture">
+          <Image src="/backgroundBlurred.png" alt="bakgroundPicture" quality={100} fill sizes="100%" priority
+            style={{
+            objectFit: 'cover',
+            }} 
+          />
+        </div>
+      </body>
     </html>
   );
 }
