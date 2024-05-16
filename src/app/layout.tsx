@@ -19,7 +19,7 @@ export default function RootLayout({
         <Header />
         <div id="content">{children}</div>
         <div id="backgroundPicture">
-          <Image src="/backgroundBlurred.png" alt="bakgroundPicture" quality={100} fill sizes="100%" priority
+          <Image src="/backgroundBlurred.png" alt="bakgroundPicture" quality={100} fill sizes="100%" placeholder="blur" blurDataURL={'/img/logo.png'}
             style={{
             objectFit: 'cover',
             }} 

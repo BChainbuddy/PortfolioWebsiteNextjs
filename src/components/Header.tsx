@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <>
       <div
-        className={`sticky top-0 z-20 sm:h-[10vh] lg:h-[10vh] lg:mb-[5vh] lg:mt-[5vh] flex flex-row justify-between sm:items-center sm:pb-4 sm:pt-4 border-bottom-LightBlue sm:bg-teal-950 w-screen ${
+        className={`sticky top-0 z-20 sm:h-[10vh] lg:h-[10vh] lg:mb-[5vh] lg:mt-[5vh] flex flex-row justify-between sm:items-center sm:pb-4 sm:pt-4 border-bottom-LightBlue sm:bg-teal-950 w-full ${
           stickyHeader
             ? "transition-all duration-300"
             : "lg:bg-transparent lg:border-b-transparent"
