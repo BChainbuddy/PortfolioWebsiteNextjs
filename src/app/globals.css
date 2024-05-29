@@ -345,15 +345,12 @@ body {
   color: hsl(169 100% 41%);
 }
 
-.transitionFilterMenu {
-}
-
 .transitionFilterButtonOpen {
-  transition: all 100ms;
+  transition: border-radius 100ms, background-color 250ms ease-out;
 }
 
 .transitionFilterButtonClose {
-  transition: all 100ms 490ms;
+  transition: border-radius 100ms 490ms, background-color 250ms ease-out;
 }
 
 .filterMenuOpen {
@@ -366,9 +363,6 @@ body {
 
 .filterMenuClose {
   height: 0px;
-  border-left: 2px solid none;
-  border-top: 2px solid none;
-  border-bottom: 2px solid none;
   transition: height 500ms, border 10ms 480ms;
 }
 
