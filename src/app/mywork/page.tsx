@@ -28,7 +28,9 @@ export default function MyWork() {
           <button
             id="filterButton"
             className={`md:mr-28 border-LightBlue border-8 w-36 text-center hover:bg-teal-600 ${
-              openFilter ? "rounded-t-lg transitionFilterButtonOpen" : "rounded-lg transitionFilterButtonClose"
+              openFilter
+                ? "rounded-t-lg transitionFilterButtonOpen"
+                : "rounded-lg transitionFilterButtonClose"
             }`}
             onClick={() => {
               setOpenFilter(!openFilter);
@@ -75,6 +77,12 @@ export default function MyWork() {
             <FilterOption
               name={"React"}
               option={"react"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Golang"}
+              option={"golang"}
               setFilter={setFilter}
               filter={filter}
             />

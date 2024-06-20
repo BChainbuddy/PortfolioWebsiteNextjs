@@ -1,5 +1,12 @@
 [
     {
+        "description": "This is a proof of work blockchain created in golang programming language. It also contains wallet ui and server interactions.",
+        "github_url": "https://github.com/BChainbuddy/golang_blockchain",
+        "demo_url": "",
+        "img_src": "/golangBlockchain.png",
+        "category": ["golang"]
+    },
+    {
         "description": "This is a BE-BETTER store frontend made with react. Users can browse and buy items provided by the store. The project leverages passport strategies for user authentication through manual users and google accounts. It also leverages stripe for payments.",
         "github_url": "https://github.com/BChainbuddy/E-commerce_react",
         "demo_url": "https://e-commerce-react-3uf0.onrender.com",

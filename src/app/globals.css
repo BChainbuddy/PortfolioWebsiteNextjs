@@ -354,7 +354,7 @@ body {
 }
 
 .filterMenuOpen {
-  height: 200px;
+  height: 230px;
   border-left: 2px solid hsl(169 100% 41%);
   border-right: 2px solid hsl(169 100% 41%);
   border-bottom: 2px solid hsl(169 100% 41%);
