@@ -6,17 +6,17 @@ interface projectProps {
   project: {
     img_src: string;
     github_url: string;
-    demo_url?: string; 
+    demo_url?: string;
     description: string;
   };
   index: number;
 }
 
-export default function Project({ project, index } : projectProps) {
+export default function Project({ project, index }: projectProps) {
   const [seeProject, setSeeProject] = useState(false);
 
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -42,39 +42,37 @@ export default function Project({ project, index } : projectProps) {
       </div>
       <div className="relative group">
         <div>
-            <div className="h-48 w-full project-shadow group-hover:shadow-none relative">
-              <Image
-                src={project.img_src}
-                alt={`Photo of project ${index}`}
-                fill
-                sizes="100%"
-                style={{
-                  objectFit: 'cover',
-                }}
-              />
-            </div>
-            <div className="md:flex sm:hidden">
-              <a href={project.github_url}>
-                <div
-                  className={`${
-                    project.demo_url ? "w-1/2" : "w-full"
-                  } text-BlueGreen darkGreenBackground opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center`}
-                >
-                  <p>Click to see the source code...</p>
+          <div className="h-48 w-full project-shadow group-hover:shadow-none relative">
+            <Image
+              src={project.img_src}
+              alt={`Photo of project ${index}`}
+              fill
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div className="md:flex sm:hidden">
+            <a href={project.github_url}>
+              <div
+                className={`${
+                  project.demo_url ? "w-1/2" : "w-full"
+                } text-BlueGreen darkGreenBackground opacity-0 hover:opacity-100 absolute top-0 left-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center`}
+              >
+                <p>Click to see the source code...</p>
+              </div>
+            </a>
+            {project.demo_url ? (
+              <a href={project.demo_url} target="_blank">
+                <div className="text-BlueGreen darkGreenBackground w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center">
+                  <p>Click to see the demo...</p>
                 </div>
               </a>
-              {project.demo_url ? (
-                <a href={project.demo_url} target="_blank">
-                  <div
-                    className="text-BlueGreen darkGreenBackground w-1/2 opacity-0 hover:opacity-100 absolute top-0 right-0 bottom-0 hover:backdrop-blur-lg text-cyan-600 font-bold flex items-center justify-center text-center"
-                  >
-                    <p>Click to see the demo...</p>
-                  </div>
-                </a>
-              ) : (
-                <></>
-              )}
-            </div>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </div>
       <div className="backdrop-blur-lg darkGreenBackground border-LightBlue rounded-xl">

@@ -42,9 +42,13 @@ export default function Header() {
       >
         <div className="flex lg:ml-20 md:ml-8 sm:ml-2 items-center p-0">
           <div className="lg:h-12 lg:w-12 sm:h-10 sm:w-10 relative">
-            <Image src="/jakapLogoTransparent.png" alt="logo" sizes="100%" fill         
+            <Image
+              src="/jakapLogoTransparent.png"
+              alt="logo"
+              sizes="100%"
+              fill
               style={{
-                objectFit: 'cover',
+                objectFit: "cover",
               }}
             />
           </div>
@@ -96,9 +100,9 @@ export default function Header() {
               href="/contact"
               className={`${
                 pathname === "/contact"
-                  ? "text-white font-bold"
-                  : "text-LightBlue"
-              } hover:text-teal-900`}
+                  ? "border-white text-white"
+                  : "border-[#00d19d] text-teal-900"
+              } rounded-3xl bg-LightBlue px-3 py-1.5 border-2 hover:border-white duration-300 ease-out transition-all font-semibold hover:text-white`}
             >
               Contact
             </Link>

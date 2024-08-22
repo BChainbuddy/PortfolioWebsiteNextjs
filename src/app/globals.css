@@ -236,19 +236,19 @@ body {
 }
 
 .contact1 {
-  transform: translateX(-100px);
+  transform: translateX(-30px);
   opacity: 0;
-  animation: animateContactPage 1000ms forwards 300ms;
+  animation: animateContactPage 1000ms forwards 1200ms;
 }
 .contact2 {
-  transform: translateX(-100px);
+  transform: translateX(-30px);
   opacity: 0;
-  animation: animateContactPage 1000ms forwards 500ms;
+  animation: animateContactPage 1000ms forwards 1500ms;
 }
 .contact3 {
-  transform: translateX(-100px);
+  transform: translateX(-30px);
   opacity: 0;
-  animation: animateContactPage 1000ms forwards 700ms;
+  animation: animateContactPage 1000ms forwards 1800ms;
 }
 
 @keyframes animateContactPage {
