@@ -13,7 +13,7 @@ export default function Skills() {
           </h1>
         </div>
         <div className="lg:flex place-items-center sm:hidden lg:space-y-20 lg:flex-col px-12 items-start">
-        <div className="flex ml-20">
+          <div className="flex ml-20">
             <div className="flex-row flex items-center space-x-10 w-full">
               <h2 className="w-48 cursor-default text-3xl text-LightBlue text-center border-LightBlue border-2 rounded-2xl font-mono">
                 BACKEND

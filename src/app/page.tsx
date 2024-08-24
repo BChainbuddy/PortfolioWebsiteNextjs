@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:ml-48 md:ml-6 md:mt-6 lg:mt-0 md:flex sm:hidden">
-          <div className="lg:h-[340px] lg:w-[340px] md:h-60 md:w-60 relative">
+          <div className="lg:h-[45vh] lg:w-[45vh] md:h-60 md:w-60 relative">
             <Image
               src="/man-technologist-light-skin-tone-svgrepo-com.svg"
               sizes="100%"

@@ -18,7 +18,7 @@ export default function ImageAction({
       <div className={`flex flex-row items-center space-x-4 ${animation}`}>
         <a href={href}>
           <div
-            className={`md:w-12 md:h-12 sm:h-12 sm:w-12 relative ${special} hover:opacity-50 transition-all duration-300 ease-out`}
+            className={`md:w-12 md:h-12 sm:h-10 sm:w-10 relative ${special} hover:opacity-50 transition-all duration-300 ease-out`}
           >
             <Image
               src={src}

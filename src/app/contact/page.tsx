@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+// To do comments:
+// Make a form
+// Description, name
+// Alert that I have received the mail
+
 export default function Contact() {
   return (
     <div className="sm:items-center lg:h-[80vh] sm:h-[90vh] flex flex-row justify-center lg:space-x-28">
@@ -17,7 +22,7 @@ export default function Contact() {
                 fill
                 alt="gmailLogo"
                 style={{
-                  objectFit: 'cover'
+                  objectFit: "cover",
                 }}
               />
             </div>
@@ -34,7 +39,7 @@ export default function Contact() {
                 fill
                 alt="linkedInLogo"
                 style={{
-                  objectFit: 'cover',
+                  objectFit: "cover",
                 }}
               />
             </div>
@@ -51,7 +56,7 @@ export default function Contact() {
                 fill
                 alt="githubLogo"
                 style={{
-                  objectFit: 'cover',
+                  objectFit: "cover",
                 }}
               />
             </div>
@@ -64,11 +69,10 @@ export default function Contact() {
         </div>
       </div>
       <div className="md:p-8">
-        <div className="lg:flex md:hidden sm:hidden relative">
+        <div className="lg:flex md:hidden sm:hidden relative lg:h-[45vh] lg:w-[45vh] md:h-60 md:w-60 ">
           <Image
             src="/contactmeimg5.png"
-            width={320}
-            height={320}
+            fill
             alt="contactImg"
             className="img-shadow"
           />

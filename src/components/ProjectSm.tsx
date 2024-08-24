@@ -5,15 +5,15 @@ interface projectProps {
   project: {
     img_src: string;
     github_url: string;
-    demo_url?: string; 
+    demo_url?: string;
     description: string;
   };
   index: number;
 }
 
-export default function ProjectSm({ project, index } : projectProps) {
+export default function ProjectSm({ project, index }: projectProps) {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.2,
   });
   return (
     <div
@@ -62,7 +62,7 @@ export default function ProjectSm({ project, index } : projectProps) {
                   className="invert"
                   sizes="100%"
                   style={{
-                    objectFit: 'cover',
+                    objectFit: "cover",
                   }}
                   fill
                   alt="clickPhoto"
@@ -74,7 +74,7 @@ export default function ProjectSm({ project, index } : projectProps) {
           <></>
         )}
       </div>
-      <div className="h-48 w-full project-shadow relative">      
+      <div className="h-48 w-full project-shadow relative">
         <Image
           src={project.img_src}
           alt={`Photo of project ${index}`}

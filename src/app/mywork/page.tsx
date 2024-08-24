@@ -19,9 +19,8 @@ export default function MyWork() {
       </div>
       <div className="lg:flex sm:hidden md:p-4 md:mt-4 justify-between items-center">
         <h2 className="ml-28 text-2xl text-LightBlue font-mono">
-          <span id="recentlyAdded">RECENTLY ADDED:</span>
-          <span id="allProjects" className="hidden">
-            ALL PROJECTS:
+          <span id="recentlyAdded">
+            {open ? "ALL PROJECTS:" : "RECENTLY ADDED:"}
           </span>
         </h2>
         <div className={open ? "" : "hidden"}>
@@ -41,7 +40,7 @@ export default function MyWork() {
           <div
             id="filterMenu"
             className={`overflow-hidden flex flex-col absolute rounded-b-lg w-36 bg-teal-900 z-10 transitionFilterMenu ${
-              openFilter ? "filterMenuOpen" : "filterMenuClose"
+              openFilter ? "filterMenuOpen h-56" : "filterMenuClose"
             } `}
           >
             <FilterOption
