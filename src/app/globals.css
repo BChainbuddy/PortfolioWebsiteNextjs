@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 2560px) and (max-width: 3000px) {
+@media (min-width: 2560px) and (max-width: 2999px) {
   html {
-    font-size: clamp(0.8rem, 0.7vw + 0.5rem, 5rem);
+    font-size: clamp(0.8rem, 0.7vw + 0.6rem, 5rem);
+  }
+}
+
+@media (min-width: 976px) and (max-width: 2559px) {
+  html {
+    font-size: clamp(0.8rem, 0.7vw + 0.4rem, 5rem);
   }
 }
 
@@ -61,6 +67,16 @@ body {
 .border-bottom-LightBlue {
   border-bottom: 2px solid hsl(169 100% 41%);
 }
+
+.border-contact {
+  border: 0.2rem solid hsl(169 100% 41%);
+  transition: all 0.3s ease-out;
+  background: hsl(169 100% 7%);
+}
+
+/* .border-contact:hover {
+  box-shadow: 0 0 0.75rem hsl(169 100% 41%);
+} */
 
 .bg-DarkBlue {
   --tw-bg-opacity: 1;
@@ -252,6 +268,7 @@ body {
   opacity: 0;
   animation: animateContactPage 1000ms forwards 1200ms;
 }
+
 .contact2 {
   transform: translateX(-30px);
   opacity: 0;
@@ -324,6 +341,28 @@ body {
   }
 }
 
+.animateSuccess {
+  animation: successAnimation 2s infinite;
+}
+
+@keyframes successAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-0.3rem);
+  }
+
+  60% {
+    transform: translateY(-0.3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .project-shadow {
   transition: all 250ms;
   box-shadow: 0 0 1rem hsl(169 100% 41%);
@@ -391,4 +430,109 @@ body {
   position: relative;
   z-index: 9;
   flex: 1;
+}
+
+.input-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+  border-radius: 0.5rem;
+  border: 0.15rem solid hsl(169 100% 30%);
+  transition: border 250ms ease-out;
+  z-index: 1;
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  color: white;
+  position: relative;
+  font-size: 1rem;
+}
+
+.input-label {
+  position: absolute;
+  left: 3%;
+  top: 18%;
+  color: hsl(169 100% 30%);
+  pointer-events: none;
+  z-index: 2;
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  padding: 0 0.2rem;
+  transition: all 250ms ease-out;
+}
+
+.input-label-text {
+  position: absolute;
+  left: 3%;
+  top: 4%;
+  color: hsl(169 100% 30%);
+  pointer-events: none;
+  z-index: 2;
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  padding: 0 0.2rem;
+  transition: all 250ms ease-out;
+}
+
+.input-wrapper:focus {
+  outline: none;
+  border: 0.15rem solid hsl(169 100% 41%);
+  box-shadow: 0 0 0.4rem hsl(169 100% 41%);
+}
+
+.input-label-focus {
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  left: 5%;
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  color: hsl(169 100% 41% / var(--tw-text-opacity));
+  height: fit-content;
+  padding-top: 0.5rem;
+  display: flex;
+  justify: center;
+  align-items: center;
+}
+
+.input-label-focus-none {
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  left: 5%;
+  color: hsl(169 100% 35%);
+  height: fit-content;
+  padding-top: 0.5rem;
+  display: flex;
+  justify: center;
+  align-items: center;
+}
+
+.textarea-wrapper {
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.15rem solid hsl(169 100% 30%);
+  background-color: hsl(169 100% 7% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border 250ms ease-out;
+  z-index: 1;
+  position: relative;
+}
+
+.textarea-wrapper:focus {
+  outline: none;
+  box-shadow: 0 0 0.5em hsl(169 100% 41%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
 }

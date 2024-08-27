@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Image from "next/image";
+import VideoBackground from "@/components/VideoBackground";
 
 export const metadata: Metadata = {
   title: "Jaka's Portfolio",
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body className={`flex flex-col`}>
         <Header />
         <div id="content">{children}</div>
-        <div id="backgroundPicture">
+        <div id="backgroundPicture" className="relative">
           <Image
             src="/backgroundBlurred.png"
             alt="bakgroundPicture"
@@ -32,6 +33,7 @@ export default function RootLayout({
               objectFit: "cover",
             }}
           />
+          {/* <VideoBackground /> */}
         </div>
       </body>
     </html>
