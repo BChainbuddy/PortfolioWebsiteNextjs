@@ -18,9 +18,24 @@ export default function MyWork() {
         </h1>
       </div>
       <div className="lg:flex sm:hidden md:p-4 md:mt-4 justify-between items-center">
-        <h2 className="ml-28 text-2xl text-LightBlue font-mono">
-          <span id="recentlyAdded">
-            {open ? "ALL PROJECTS:" : "RECENTLY ADDED:"}
+        <h2 className="ml-28 text-2xl text-LightBlue font-mono realtive font-semibold">
+          <span
+            className={`absolute transition-all duration-500 ${
+              !open
+                ? "translate-y-4 opacity-0"
+                : "translate-y-0 opacity-1 delay-300"
+            }`}
+          >
+            ALL PROJECTS
+          </span>
+          <span
+            className={`absolute transition-all duration-500 ${
+              !open
+                ? "translate-y-0 opacity-1 delay-300"
+                : "-translate-y-4 opacity-0"
+            }`}
+          >
+            RECENTLY ADDED
           </span>
         </h2>
         <div className={open ? "" : "hidden"}>

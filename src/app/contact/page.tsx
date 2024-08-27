@@ -14,7 +14,7 @@ export default function Contact() {
         <EmailForm />
         <div
           id="actionItems"
-          className="flex flex-row mx-auto w-[80%] justify-around items-center mt-8 md:hidden"
+          className="flex flex-row mx-auto w-[80%] justify-around items-center mt-8 lg:hidden"
         >
           <ImageAction
             src="/gmail-icon-509x512-ikquhn8l.png"

@@ -27,7 +27,7 @@ export default function Project({ project, index }: projectProps) {
 
   return (
     <div
-      className={`flex flex-col w-80 space-y-4 ${
+      className={`flex flex-col w-[22rem] space-y-4 ${
         seeProject ? "project-end" : ""
       } ${
         index % 3 === 0 ? "project1" : index % 3 === 1 ? "project2" : "project3"
@@ -42,7 +42,7 @@ export default function Project({ project, index }: projectProps) {
       </div>
       <div className="relative group">
         <div>
-          <div className="h-48 w-full project-shadow group-hover:shadow-none relative">
+          <div className="h-[14rem] w-full project-shadow group-hover:shadow-none relative">
             <Image
               src={project.img_src}
               alt={`Photo of project ${index}`}
