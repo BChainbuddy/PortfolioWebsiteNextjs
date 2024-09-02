@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="lg:h-[65vh] flex flex-row justify-center sm:items-center">
+      <div className="h-[65vh] flex flex-row justify-center sm:items-center">
         <div className="flex flex-col mt-10 sm:w-11/12 md:w-auto lg:min-w-max justify-evenly">
           <div
             id="name"
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pt-6 pb-10 flex justify-center items-center lg:h-[15vh]">
+      <div className="pt-6 pb-10 flex justify-center items-center h-[15vh]">
         <p
           id="quote"
           className="homepage-start3 cursor-default sm:text-base md:text-lg lg:text-xl text-center font-thin font-mono text-transparent bg-clip-text custom-gradient-right"
