@@ -54,7 +54,7 @@ export default function Project({ project, index }: projectProps) {
             />
           </div>
           <div className="md:flex sm:hidden">
-            <a href={project.github_url}>
+            <a href={project.github_url} target="_blank">
               <div
                 className={`${
                   project.demo_url ? "w-1/2" : "w-full"

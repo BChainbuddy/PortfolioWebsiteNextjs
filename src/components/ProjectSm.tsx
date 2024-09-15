@@ -34,7 +34,11 @@ export default function ProjectSm({ project, index }: projectProps) {
             project.demo_url ? "" : "w-full justify-center items-center"
           }`}
         >
-          <a href={project.github_url} className="flex flex-row space-x-0.5">
+          <a
+            href={project.github_url}
+            className="flex flex-row space-x-0.5"
+            target="_blank"
+          >
             <p>Click here for code</p>
             <span className="h-3 w-3 relative my-auto">
               <Image

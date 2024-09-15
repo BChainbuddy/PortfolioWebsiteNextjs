@@ -1,111 +1,118 @@
 [
     {
-        "description": "This is a proof of work blockchain created in golang programming language. It also contains wallet ui and server interactions.",
+        "description": "RunBro is designed to encourage a healthier lifestyle through daily physical activities, particularly running. By offering rewards for achieving personal fitness goals, it motivates users to stay active. My role in the project was developing the frontend using Next.js.",
+        "github_url": "https://github.com/RunBroHackaton",
+        "demo_url": "https://dorahacks.io/buidl/14329",
+        "img_src": "/RunBro.png",
+        "category": ["javascript", "nextjs"]
+    },
+    {
+        "description": "This project showcases a fully functional blockchain based on the Proof-of-Work consensus mechanism, developed using Go. It includes a user interface for wallets and handles server interactions.",
         "github_url": "https://github.com/BChainbuddy/golang_blockchain",
         "demo_url": "",
         "img_src": "/golangBlockchain.png",
         "category": ["golang"]
     },
     {
-        "description": "This is a BE-BETTER store frontend made with react. Users can browse and buy items provided by the store. The project leverages passport strategies for user authentication through manual users and google accounts. It also leverages stripe for payments.",
+        "description": "A comprehensive e-commerce platform featuring a React-based frontend and a backend built with an Express.js server and PostgreSQL database. Users can browse and purchase products, with Google OAuth and manual login provided by Passport.js for authentication. The project also integrates Stripe for secure payments.",
         "github_url": "https://github.com/BChainbuddy/E-commerce_react",
         "demo_url": "https://e-commerce-react-3uf0.onrender.com",
         "img_src": "/Be-BETTER_screenshot.png",
-        "category": ["react", "javascript"]
-    },
+        "category": ["react", "javascript", "express", "postgresql"]
+    },    
     {
-        "description": "Seadex, a decentralized exchange (DEX) powered by an AMM system, facilitates token swapping within liquidity pools. Users can earn yield by investing and launch new pools. Operating in Sepolia, it's a user-friendly gateway to DeFi.",
+        "description": "Seadex is a decentralized exchange utilizing an Automated Market Maker (AMM) for seamless token swaps and yield earning. Users can provide liquidity and launch new pools, fostering an active DeFi ecosystem. The platform is built with Next.js, offering an intuitive and powerful user experience.",
         "github_url": "https://github.com/BChainbuddy/decentralizedExchange",
         "demo_url": "https://seadex.vercel.app/",
         "img_src": "/dexScreenshot.png",
         "category": ["javascript", "nextjs"]
-    },
+    },      
     {
-        "description": "This is WeaveSwap, a platform that consists of a Dex and a Lending protocol. It was made for BNB hackaton on dorahacks. My part was to architect and deploy all the smart contracts.",
+        "description": "WeaveSwap combines a decentralized exchange and a lending protocol, created for the BNB Hackathon. I was responsible for designing and deploying all smart contracts powering the platform.",
         "github_url": "https://github.com/WeaveSwap/smart-contracts",
         "demo_url": "https://weaveonbnb.vercel.app/",
         "img_src": "/WeaveSwap.png",
         "category": ["javascript", "solidity", "hardhat"]
     },
     {
-        "description": "This is a cryptocurrency bridge which enables cross-chain transfer of tokens. It is fully decentralized and uses signing methods to ensure its security. It is made with hardhat using solidity and javascript.",
+        "description": "A decentralized token bridge that facilitates secure cross-chain token transfers. Built with Solidity and Hardhat, it employs secure signing methods to ensure transactional integrity.",
         "github_url": "https://github.com/BChainbuddy/TokenBridge",
         "demo_url": "",
         "img_src": "/CryptoBridge.jpeg",
         "category": ["solidity", "javascript", "hardhat"]
     },
     {
-        "description": "This is a e-commerce store backend made with expressjs and postgresql. It enables the user to retrieve item data, make and use an account (leveraging passport and cookies) and to see orders as well as cart.",
+        "description": "A robust backend for an e-commerce platform built with Express.js and PostgreSQL. It manages user accounts, authentication (via Passport and cookies), orders, and shopping cart functionalities.",
         "github_url": "https://github.com/BChainbuddy/E-commerce_express",
         "demo_url": "",
         "img_src": "/node-express-web-server.png",
         "category": ["javascript"]
     },
     {
-        "description": "My very own Liquidity Pool. It is made with hardhat using solidity and javascript. It has lots of functionalities such as exchange of tokens, liquidity providing, yield farming, and much more...",
+        "description": "A fully-featured liquidity pool developed with Solidity, JavaScript, and Hardhat. It supports token swaps, liquidity provision, and yield farming, offering DeFi users a comprehensive trading solution.",
         "github_url": "https://github.com/BChainbuddy/LiquidityPool",
         "demo_url": "",
         "img_src": "/hardhatplaceholder.jpeg",
         "category": ["solidity", "javascript", "hardhat"]
     },
     {
-        "description": "This is a React app that integrates reddit web API. The user can authorize the app to get real-time reddit posts, comments, and have the ability to vote on the preferred data.",
+        "description": "This React app integrates with the Reddit API to fetch real-time posts and comments. Users can authenticate, interact with the content, and vote on posts within the app.",
         "github_url": "https://github.com/BChainbuddy/CustomRedditClient",
         "demo_url": "https://customredditclient.netlify.app",
         "img_src": "/RedditClient.png",
         "category": ["react", "javascript"]
     },
     {
-        "description": "This is a React app that integrates spotify web API. It enables the user the ability to search through Spotify's library, pick and play songs and make new playlists with the songs and name of their choosing.",
+        "description": "A React-based app that integrates the Spotify Web API, allowing users to search for songs, play music, and create custom playlists. Users can build their perfect playlist and manage their Spotify library with ease.",
         "github_url": "https://github.com/BChainbuddy/React_SpotifyPlaylist",
         "demo_url": "https://incandescent-fenglisu-612360.netlify.app",
         "img_src": "/Jamming.png",
         "category": ["react", "javascript"]
     },
     {
-        "description": "This is a contract based on ERC1155 token standard. It creates multiple game items such as avatar customizations, powerups and currencies. It uses Chainlink VRF for functionality for randomness of the packs.",
+        "description": "An ERC-1155-based smart contract for creating multiple game items like avatars, power-ups, and in-game currencies. It uses Chainlink VRF for generating random outcomes when interacting with item packs.",
         "github_url": "https://github.com/BChainbuddy/ERC-1155_GameItems",
         "demo_url": "",
         "img_src": "/hardhatplaceholder.jpeg",
         "category": ["solidity", "javascript", "hardhat"]
     },
     {
-        "description": "My very own openzeppelin DAO integration. This is a charity DAO, which enables the charities to get the funding with little to no intermediate cost fast and reliable. The project is made with hardhat.",
+        "description": "A decentralized charity funding DAO built with OpenZeppelin contracts. This project streamlines charity funding by minimizing intermediary costs and making the process fast, transparent, and reliable.",
         "github_url": "https://github.com/BChainbuddy/CharityDAO.git",
         "demo_url": "",
         "img_src": "/hardhatplaceholder.jpeg",
         "category": ["solidity", "javascript", "hardhat"]
     },
     {
-        "description": "My take on EIP712, it includes all the functionalities the EIP712 needs. This is my contribution to project wallet-signature by wiasliaw. It was made using foundry framework.",
+        "description": "A full implementation of the EIP712 standard, designed for secure wallet signatures. This was my contribution to the wallet-signature project, built using the Foundry framework.",
         "github_url": "https://github.com/wiasliaw/wallet-signature/pull/3",
         "demo_url": "",
         "img_src": "/EIP712Img.png",
         "category": ["solidity", "javascript"]
     },
     {
-        "description": "My very own full stack dapp coinflip minigame made of two smart contracts. One is coinflip gameplay and the second one is gamecoin nft. The frontend is made with nextjs and tailwind css, and the backend is made with solidity and hardhat.",
+        "description": "A full-stack decentralized app (dApp) featuring a CoinFlip minigame and an NFT token. The project is powered by two smart contracts—one for the gameplay and another for the in-game currency. The frontend is built with Next.js and Tailwind CSS, while the backend utilizes Solidity and Hardhat.",
         "github_url": "https://github.com/BChainbuddy/CoinFlipBackend",
         "demo_url": "",
         "img_src": "/NewCoinflipMinigamePicture.png",
         "category": ["solidity", "javascript", "hardhat", "nextjs"]
     },
     {
-        "description": "This is a nftmarketplace dapp. I made this dapp when I was going through freecodecamp 32-hour course taught by Patrick Collins.",
+        "description": "This is a decentralized NFT marketplace built during a FreeCodeCamp course taught by Patrick Collins. Users can mint, buy, and sell NFTs, while interacting with smart contracts on the blockchain.",
         "github_url": "https://github.com/BChainbuddy/NFTMarketplaceBackend",
         "demo_url": "",
         "img_src": "/Screenshot 2023-07-31 at 10.08.09.png",
         "category": ["solidity", "javascript", "hardhat", "nextjs"]
     },
     {
-        "description": "This is a trading bot made by me purely in python. The trading bot is based on double supertrend strategy with addition of heikin ashi. The exchange that it trades on is binance.",
+        "description": "A fully automated trading bot written in Python, utilizing the Double Supertrend strategy alongside Heikin Ashi candles for enhanced accuracy. The bot trades on Binance, leveraging API integrations for real-time market data.",
         "github_url": "https://github.com/BChainbuddy/TradingBot",
         "demo_url": "",
         "img_src": "/PythonTrading.jpg",
         "category": ["python"]
     },
     {
-        "description": "This is a lottery dapp. I made this dapp when I was going through freecodecamp 32-hour course taught by Patrick Collins.",
+        "description": "A decentralized lottery application built during a FreeCodeCamp 32-hour course by Patrick Collins. The smart contracts manage player participation and prize distribution, utilizing Next.js for the frontend.",
         "github_url": "https://github.com/BChainbuddy/nextjs-smartcontract-lottery-fcc",
         "demo_url": "",
         "img_src": "/hardhatplaceholder.jpeg",
