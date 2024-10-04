@@ -10,7 +10,7 @@ export default function AboutMe() {
         </h1>
       </div>
       <div className="lg:flex flex-row justify-center space-x-32 sm:hidden">
-        <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue p-3">
+        <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue p-3">
           <p className="text-justify text-xl text-white m-3 indent-8 ">
             Hello! I’m Jaka , a full-stack developer from Slovenia with a keen
             interest in both web2 and web3 technologies. Currently pursuing a
@@ -47,7 +47,7 @@ export default function AboutMe() {
             particularly
           </p>
         </div>
-        <div className="backdrop-blur-2xl darkGreenBackground w-4/12 rounded-3xl border-LightBlue">
+        <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue">
           <p className="text-justify text-xl text-white m-3 p-3">
             passionate about basketball. This energy extends into my personal
             pursuits where I enjoy exploring the world and discovering new

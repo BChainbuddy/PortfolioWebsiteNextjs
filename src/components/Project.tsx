@@ -10,9 +10,10 @@ interface projectProps {
     description: string;
   };
   index: number;
+  columns: number;
 }
 
-export default function Project({ project, index }: projectProps) {
+export default function Project({ project, index, columns }: projectProps) {
   const [seeProject, setSeeProject] = useState(false);
 
   const { ref, inView } = useInView({
@@ -27,12 +28,11 @@ export default function Project({ project, index }: projectProps) {
 
   return (
     <div
-      className={`flex flex-col w-[22rem] space-y-4 ${
+      className={`flex flex-col w-[22rem] space-y-4 project-start ${
         seeProject ? "project-end" : ""
-      } ${
-        index % 3 === 0 ? "project1" : index % 3 === 1 ? "project2" : "project3"
       }`}
       ref={ref}
+      style={{ transitionDelay: `${((index % columns) + 1) * 100}ms` }}
     >
       <div className="sm:justify-between md:justify-center text-xs text-white flex sm:flex-row">
         <p className="sm:hidden md:flex">
@@ -47,10 +47,6 @@ export default function Project({ project, index }: projectProps) {
               src={project.img_src}
               alt={`Photo of project ${index}`}
               fill
-              sizes="100%"
-              style={{
-                objectFit: "cover",
-              }}
             />
           </div>
           <div className="md:flex sm:hidden">

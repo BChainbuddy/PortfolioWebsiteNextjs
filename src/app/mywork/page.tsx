@@ -17,10 +17,10 @@ export default function MyWork() {
           MY WORK PORTFOLIO
         </h1>
       </div>
-      <div className="lg:flex sm:hidden md:p-4 md:mt-4 justify-between items-center">
-        <h2 className="ml-28 text-2xl text-LightBlue font-mono realtive font-semibold">
+      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center px-[10%]">
+        <h2 className="text-2xl relative text-LightBlue font-mono font-semibold flex justify-center items-center w-[15rem]">
           <span
-            className={`absolute transition-all duration-500 ${
+            className={`absolute transition-all duration-500 w-full ${
               !open
                 ? "translate-y-4 opacity-0"
                 : "translate-y-0 opacity-1 delay-300"
@@ -29,7 +29,7 @@ export default function MyWork() {
             ALL PROJECTS
           </span>
           <span
-            className={`absolute transition-all duration-500 ${
+            className={`absolute transition-all duration-500 w-full ${
               !open
                 ? "translate-y-0 opacity-1 delay-300"
                 : "-translate-y-4 opacity-0"
@@ -41,7 +41,7 @@ export default function MyWork() {
         <div className={open ? "" : "hidden"}>
           <button
             id="filterButton"
-            className={`md:mr-28 border-LightBlue border-8 w-36 text-center hover:bg-teal-600 ${
+            className={`border-LightBlue border-8 w-36 text-center hover:bg-teal-600 ${
               openFilter
                 ? "rounded-t-lg transitionFilterButtonOpen"
                 : "rounded-lg transitionFilterButtonClose"

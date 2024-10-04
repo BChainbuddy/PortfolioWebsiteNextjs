@@ -1,17 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PROJECTS from "../data/projects.json";
 import Project from "./Project";
 
 interface projectListProps {
-  open: boolean,
-  setOpen: (open: boolean) => void,
-  filter: string,
-  setFilter: (filter: string) => void
-  setOpenFilter: (openFilter: boolean) => void
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  filter: string;
+  setFilter: (filter: string) => void;
+  setOpenFilter: (openFilter: boolean) => void;
 }
 
-export default function ProjectList({ open, setOpen, filter, setFilter, setOpenFilter } : projectListProps) {
+export default function ProjectList({
+  open,
+  setOpen,
+  filter,
+  setFilter,
+  setOpenFilter,
+}: projectListProps) {
   const [projects, setProjects] = useState(PROJECTS);
+  const [columnCount, setColumnCount] = useState(0);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (filter) {
@@ -24,11 +32,28 @@ export default function ProjectList({ open, setOpen, filter, setFilter, setOpenF
     }
   }, [filter]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (gridRef.current) {
+        const gridWidth = gridRef.current?.offsetWidth || 0;
+        const fontSize = getComputedStyle(gridRef.current).fontSize;
+        // console.log(`Font size: ${fontSize}`);
+
+        const fontSizeInPx = parseFloat(fontSize);
+        // console.log(`Font size in pixels: ${fontSizeInPx}px`);
+
+        const columns = Math.floor(gridWidth / (fontSizeInPx * 26));
+        // console.log(`Number of columns: ${columns}`);
+        setColumnCount(columns);
+      }
+    };
+
+    handleResize();
+  }, [projects]);
+
   return (
     <>
-      <div
-        className={`lg:grid sm:hidden grid-cols-3 place-items-center gap-y-28 p-10 items-stretch`}
-      >
+      <div className={`project-list sm:hidden lg:grid`} ref={gridRef}>
         {open ? (
           <>
             {projects.map((project, i) => (
@@ -36,13 +61,19 @@ export default function ProjectList({ open, setOpen, filter, setFilter, setOpenF
                 project={project}
                 key={`${filter}-${i}`}
                 index={i}
+                columns={columnCount}
               />
             ))}
           </>
         ) : (
           <>
-            {projects.slice(0, 3).map((project, i) => (
-              <Project project={project} key={i} index={i} />
+            {projects.slice(0, columnCount).map((project, i) => (
+              <Project
+                project={project}
+                key={i}
+                index={i}
+                columns={columnCount}
+              />
             ))}
           </>
         )}
@@ -53,7 +84,7 @@ export default function ProjectList({ open, setOpen, filter, setFilter, setOpenF
           onClick={() => {
             setOpen(!open);
             setFilter("");
-            setOpenFilter(false)
+            setOpenFilter(false);
           }}
         >
           <div className="relative group">
