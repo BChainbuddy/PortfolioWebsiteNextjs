@@ -4,12 +4,16 @@
         "img_src": "/react3.png"
     }, 
     {
-        "name": "TAILWIND",
-        "img_src": "/Tailwindcss.png"
+        "name": "REDUX",
+        "img_src": "/Redux.png"
     },
     {
         "name": "NEXTJS",
         "img_src": "/nextjs.png"
+    },
+    {
+        "name": "TAILWIND",
+        "img_src": "/Tailwindcss.png"
     },
     {
         "name": "HTML",
@@ -20,14 +24,14 @@
         "img_src": "/cssLogo.png"
     },    
     {
-        "name": "REDUX",
-        "img_src": "/Redux.png"
+        "name": "JAVASCRIPT",
+        "img_src": "/javascript.png"
     }],
     "backend": [    
     {
-        "name": "JAVASCRIPT",
-        "img_src": "/javascript.png"
-    },    
+        "name": "NODEJS",
+        "img_src": "/nodejsLogo.jpg"
+    },   
     {
         "name": "SOLIDITY",
         "img_src": "/solidity.png"
