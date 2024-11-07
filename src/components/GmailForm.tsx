@@ -13,9 +13,6 @@ export default function EmailForm() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log("HERE!");
-    console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE);
-    console.log(process.env.NEXT_PUBLIC_EMAILJS_TEMP);
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMP
@@ -53,7 +50,7 @@ export default function EmailForm() {
         list: ["foo@emailjs.com", "bar@emailjs.com"],
         // The variable contains the email address
         watchVariable: "userEmail",
-      }, 
+      },
       limitRate: {
         // Set the limit rate for the application
         id: "app",
@@ -91,17 +88,6 @@ export default function EmailForm() {
           height="h-[2.2rem]"
           width="w-[20rem]"
         />
-        {/* <PrettyInput
-        type="subject"
-        name="email"
-        min={0}
-        max={0}
-        label="Email account"
-        input={email}
-        setInput={setEmail}
-        height="h-[2.2rem]"
-        width="w-[20rem]"
-      /> */}
         <PrettyText
           type="text"
           name="content"
@@ -115,7 +101,13 @@ export default function EmailForm() {
         />
         <input
           type="submit"
-          className="h-8 w-32 self-center bg-LightBlue rounded-xl cursor-pointer"
+          className={`h-8 w-32 self-center bg-[#008573] rounded-xl cursor-pointer text-lg transition-all duration-300 opacity-80 ${
+            name &&
+            email &&
+            content &&
+            "bg-LightBlue opacity-100 hover:opacity-80"
+          }`}
+          value={"Send"}
         />
       </form>
       {success ? (

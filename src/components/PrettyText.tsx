@@ -63,36 +63,3 @@ export default function PrettyText({
     </div>
   );
 }
-
-{
-  /* <div className={`${height} ${width} relative`}>
-      <input
-        className="input-wrapper"
-        type={type}
-        name={name}
-        min={type === "number" ? min : undefined}
-        max={type === "number" && max !== 0 ? max : undefined}
-        onChange={(e) => {
-          setInput(e.target.value);
-        }}
-        onFocus={() => {
-          setFocus(true);
-        }}
-        onBlur={handleBlur}
-        ref={inputRef}
-        value={input || ""}
-        required
-      />
-      <label
-        className={`input-label ${
-          !focus && input
-            ? "input-label-focus-none"
-            : focus
-            ? "input-label-focus"
-            : ""
-        }`}
-      >
-        {label}
-      </label>
-    </div> */
-}
