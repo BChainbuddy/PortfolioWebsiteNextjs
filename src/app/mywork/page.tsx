@@ -17,7 +17,7 @@ export default function MyWork() {
           MY WORK PORTFOLIO
         </h1>
       </div>
-      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center px-[10%]">
+      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center w-[85%] mx-auto px-[2%]">
         <h2 className="text-2xl relative text-LightBlue font-mono font-semibold flex justify-center items-center w-[15rem]">
           <span
             className={`absolute transition-all duration-500 w-full ${

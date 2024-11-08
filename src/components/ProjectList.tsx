@@ -42,7 +42,7 @@ export default function ProjectList({
         const fontSizeInPx = parseFloat(fontSize);
         // console.log(`Font size in pixels: ${fontSizeInPx}px`);
 
-        const columns = Math.floor(gridWidth / (fontSizeInPx * 26));
+        const columns = Math.floor(gridWidth / (fontSizeInPx * 24));
         // console.log(`Number of columns: ${columns}`);
         setColumnCount(columns);
       }
@@ -54,29 +54,27 @@ export default function ProjectList({
   return (
     <>
       <div className={`project-list sm:hidden lg:grid`} ref={gridRef}>
-        {open ? (
-          <>
-            {projects.map((project, i) => (
+        {projects.slice(0, columnCount).map((project, i) => (
+          <Project
+            project={project}
+            key={`${filter}-static-${i}`} // Key includes filter to force re-render on filter change
+            index={i}
+            columns={columnCount}
+          />
+        ))}
+
+        {/* Conditionally render additional items only when open */}
+        {open &&
+          projects
+            .slice(columnCount)
+            .map((project, i) => (
               <Project
                 project={project}
-                key={`${filter}-${i}`}
-                index={i}
+                key={`${filter}-${columnCount + i}`}
+                index={columnCount + i}
                 columns={columnCount}
               />
             ))}
-          </>
-        ) : (
-          <>
-            {projects.slice(0, columnCount).map((project, i) => (
-              <Project
-                project={project}
-                key={i}
-                index={i}
-                columns={columnCount}
-              />
-            ))}
-          </>
-        )}
       </div>
       <div className="view-start sm:hidden lg:flex justify-center mt-6 lg:p-12">
         <button
