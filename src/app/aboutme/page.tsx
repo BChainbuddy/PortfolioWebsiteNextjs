@@ -1,14 +1,11 @@
+import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutMe() {
   return (
     <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8 overflow-hidden">
-      <div className="lg:p-8 lg:mt-4 sm:mt-14">
-        <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
-          ABOUT ME
-        </h1>
-      </div>
+      <PageTitle title="ABOUT ME" />
       <div className="lg:flex flex-row justify-center space-x-32 sm:hidden">
         <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue p-3">
           <p className="text-justify text-xl text-white m-3 indent-8 ">

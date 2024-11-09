@@ -1,22 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import PROJECTS from "../data/projects.json";
 import Project from "./Project";
+import FilterOption from "./FilterOption";
 
-interface projectListProps {
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  filter: string;
-  setFilter: (filter: string) => void;
-  setOpenFilter: (openFilter: boolean) => void;
-}
+export default function ProjectList({}) {
+  const [filter, setFilter] = useState("");
+  const [openFilter, setOpenFilter] = useState(false);
+  const [open, setOpen] = useState(false);
 
-export default function ProjectList({
-  open,
-  setOpen,
-  filter,
-  setFilter,
-  setOpenFilter,
-}: projectListProps) {
   const [projects, setProjects] = useState(PROJECTS);
   const [columnCount, setColumnCount] = useState(0);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -53,6 +44,93 @@ export default function ProjectList({
 
   return (
     <>
+      {" "}
+      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center w-[85%] mx-auto px-[2%]">
+        <h2 className="text-2xl relative text-LightBlue font-mono font-semibold flex justify-center items-center w-[15rem]">
+          <span
+            className={`absolute transition-all duration-500 w-full ${
+              !open
+                ? "translate-y-4 opacity-0"
+                : "translate-y-0 opacity-1 delay-300"
+            }`}
+          >
+            ALL PROJECTS
+          </span>
+          <span
+            className={`absolute transition-all duration-500 w-full ${
+              !open
+                ? "translate-y-0 opacity-1 delay-300"
+                : "-translate-y-4 opacity-0"
+            }`}
+          >
+            RECENTLY ADDED
+          </span>
+        </h2>
+        <div className={open ? "" : "hidden"}>
+          <button
+            id="filterButton"
+            className={`border-LightBlue border-8 w-36 text-center hover:bg-teal-600 ${
+              openFilter
+                ? "rounded-t-lg transitionFilterButtonOpen"
+                : "rounded-lg transitionFilterButtonClose"
+            }`}
+            onClick={() => {
+              setOpenFilter(!openFilter);
+            }}
+          >
+            <p className="text-base text-LightBlue">FILTER</p>
+          </button>
+          <div
+            id="filterMenu"
+            className={`overflow-hidden flex flex-col absolute rounded-b-lg w-36 bg-teal-900 z-10 transitionFilterMenu ${
+              openFilter ? "filterMenuOpen h-56" : "filterMenuClose"
+            } `}
+          >
+            <FilterOption
+              name={"Javascript"}
+              option={"javascript"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Python"}
+              option={"python"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Solidity"}
+              option={"solidity"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Nextjs"}
+              option={"nextjs"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Hardhat"}
+              option={"hardhat"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"React"}
+              option={"react"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Golang"}
+              option={"golang"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+          </div>
+        </div>
+      </div>
       <div className={`project-list sm:hidden lg:grid`} ref={gridRef}>
         {projects.slice(0, columnCount).map((project, i) => (
           <Project

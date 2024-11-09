@@ -1,16 +1,13 @@
 import EmailForm from "@/components/GmailForm";
 import ImageAction from "@/components/ImageAction";
+import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
 
 export default function Contact() {
   return (
     <div className="sm:items-center lg:h-[80vh] sm:h-[90vh] flex flex-row justify-center lg:space-x-28">
-      <div className="space-y-10 sm:px-4 md:px-16 py-12 rounded-3xl border-contact">
-        <div className="">
-          <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
-            CONTACT ME
-          </h1>
-        </div>
+      <div className="space-y-10 sm:px-4 md:px-16 pb-12 pt-2 rounded-3xl border-contact">
+        <PageTitle title="CONTACT ME" />
         <EmailForm />
         <div
           id="actionItems"

@@ -2,16 +2,13 @@ import SKILLS from "../../data/skills.json";
 import Skill from "@/components/Skill";
 import LearningResource from "@/components/LearningResource";
 import resources from "../../data/resources.json";
+import PageTitle from "@/components/PageTitle";
 
 export default function Skills() {
   return (
     <>
       <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 pb-8">
-        <div className="lg:p-8 lg:mt-4 sm:mt-14">
-          <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
-            TECHNOLOGIES
-          </h1>
-        </div>
+        <PageTitle title="TECHNOLOGIES" />
         <div className="lg:flex place-items-center sm:hidden lg:space-y-20 lg:flex-col pr-48 items-start mx-auto">
           <div className="flex">
             <div className="flex-row flex items-center space-x-10 w-full">
