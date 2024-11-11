@@ -1,4 +1,5 @@
 import ImageAction from "@/components/ImageAction";
+import NameIntro from "@/components/NameIntro";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,29 +7,7 @@ export default function Home() {
     <>
       <div className="h-[65vh] flex flex-row justify-center sm:items-center">
         <div className="flex flex-col mt-10 sm:w-11/12 md:w-auto lg:min-w-max justify-evenly">
-          <div
-            id="name"
-            className="homepage-start1 sm:items-end md:items-center space-x-1 md:text-start sm:text-center md:justify-normal sm:justify-center"
-          >
-            <p className="flex sm:justify-center md:justify-normal items-center cursor-default sm:text-4xl md:text-5xl text-white text-transparent bg-clip-text">
-              Hello
-              <span className="inline-block sm:h-14 sm:w-14 md:h-20 md:w-20 relative">
-                <Image
-                  src="/1F44B.svg"
-                  sizes="100%"
-                  fill
-                  alt="wavingEmoji"
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </span>
-              , MY
-            </p>
-            <p className="sm:text-5xl md:text-6xl text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom md:text-start md:w-auto sm:text-center">
-              NAME IS JAKA
-            </p>
-          </div>
+          <NameIntro />
           <div id="developer" className="homepage-start2 md:space-y-1 mt-4">
             <p className="cursor-default sm:text-lg md:text-xl text-white sm:text-center md:text-start">
               <span className="text-glow sm:text-xl md:text-2xl font-serif font-semibold">
