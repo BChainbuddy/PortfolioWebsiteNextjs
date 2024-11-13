@@ -529,8 +529,6 @@ input:-webkit-autofill:active {
 .project-list {
   grid-template-columns: repeat(auto-fit, 22rem);
   gap: 2rem;
-  padding: 3rem 0;
   width: 80%;
-  margin: 0 auto;
   justify-content: space-between;
 }

@@ -40,7 +40,7 @@ export default function Project({ project, index, columns }: projectProps) {
           <span className="text-sm sm:hidden md:flex">👇</span>
         </p>
       </div>
-      <div className="relative group">
+      <div className="relative group rounded-md overflow-hidden">
         <div>
           <div className="h-[14rem] w-full project-shadow group-hover:shadow-none relative">
             <Image
