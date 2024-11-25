@@ -141,7 +141,7 @@ export default function ProjectList() {
         </div>
       </div>
       <div
-        className={`project-list sm:hidden lg:grid pt-[3rem] mx-auto `}
+        className={`project-list sm:hidden lg:grid pt-[3rem] mx-auto`}
         ref={gridRef}
       >
         {projects.slice(0, columnCount).map((project, i) => (
@@ -153,7 +153,6 @@ export default function ProjectList() {
           />
         ))}
       </div>
-
       <motion.div
         className="project-list sm:hidden lg:grid overflow-hidden mt-[2rem] mx-auto"
         ref={gridRef2}

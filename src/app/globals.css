@@ -46,6 +46,12 @@ body {
   min-height: 100vh; /* Set minimum height to 100% of the viewport height */
 }
 
+::selection {
+  --tw-bg-opacity: 0.8;
+  background-color: hsl(169 100% 41% / var(--tw-bg-opacity));
+  color: white;
+}
+
 .bg-LightBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(169 100% 41% / var(--tw-bg-opacity));
