@@ -59,7 +59,7 @@
     "description": "A fully-featured liquidity pool developed with Solidity, JavaScript, and Hardhat. It supports token swaps, liquidity provision, and yield farming, offering DeFi users a comprehensive trading solution.",
     "github_url": "https://github.com/BChainbuddy/LiquidityPool",
     "demo_url": "",
-    "img_src": "/hardhatplaceholder.jpeg",
+    "img_src": "/liquiditypool.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
@@ -80,14 +80,14 @@
     "description": "An ERC-1155-based smart contract for creating multiple game items like avatars, power-ups, and in-game currencies. It uses Chainlink VRF for generating random outcomes when interacting with item packs.",
     "github_url": "https://github.com/BChainbuddy/ERC-1155_GameItems",
     "demo_url": "",
-    "img_src": "/hardhatplaceholder.jpeg",
+    "img_src": "/erc1155.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
     "description": "A decentralized charity funding DAO built with OpenZeppelin contracts. This project streamlines charity funding by minimizing intermediary costs and making the process fast, transparent, and reliable.",
     "github_url": "https://github.com/BChainbuddy/CharityDAO.git",
     "demo_url": "",
-    "img_src": "/hardhatplaceholder.jpeg",
+    "img_src": "/dao.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
@@ -105,24 +105,10 @@
     "category": ["solidity", "javascript", "hardhat", "nextjs"]
   },
   {
-    "description": "This is a decentralized NFT marketplace built during a FreeCodeCamp course taught by Patrick Collins. Users can mint, buy, and sell NFTs, while interacting with smart contracts on the blockchain.",
-    "github_url": "https://github.com/BChainbuddy/NFTMarketplaceBackend",
-    "demo_url": "",
-    "img_src": "/Screenshot 2023-07-31 at 10.08.09.png",
-    "category": ["solidity", "javascript", "hardhat", "nextjs"]
-  },
-  {
     "description": "A fully automated trading bot written in Python, utilizing the Double Supertrend strategy alongside Heikin Ashi candles for enhanced accuracy. The bot trades on Binance, leveraging API integrations for real-time market data.",
     "github_url": "https://github.com/BChainbuddy/TradingBot",
     "demo_url": "",
     "img_src": "/PythonTrading.jpg",
     "category": ["python"]
-  },
-  {
-    "description": "A decentralized lottery application built during a FreeCodeCamp 32-hour course by Patrick Collins. The smart contracts manage player participation and prize distribution, utilizing Next.js for the frontend.",
-    "github_url": "https://github.com/BChainbuddy/nextjs-smartcontract-lottery-fcc",
-    "demo_url": "",
-    "img_src": "/hardhatplaceholder.jpeg",
-    "category": ["solidity", "javascript", "hardhat", "nextjs"]
   }
 ]
