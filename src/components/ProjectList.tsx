@@ -92,12 +92,18 @@ export default function ProjectList() {
           <div
             id="filterMenu"
             className={`overflow-hidden flex flex-col absolute rounded-b-lg w-36 bg-teal-900 z-10 transitionFilterMenu ${
-              openFilter ? "filterMenuOpen h-56" : "filterMenuClose"
+              openFilter ? "filterMenuOpen h-64" : "filterMenuClose"
             } `}
           >
             <FilterOption
               name={"Javascript"}
               option={"javascript"}
+              setFilter={setFilter}
+              filter={filter}
+            />
+            <FilterOption
+              name={"Typescript"}
+              option={"typescript"}
               setFilter={setFilter}
               filter={filter}
             />
