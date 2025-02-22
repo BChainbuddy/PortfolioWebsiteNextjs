@@ -41,16 +41,11 @@ export default function AboutMe() {
             forefront of the industry.<br></br>
             <br></br>
             Outside of coding, I am an avid sports enthusiast and fitness buff,
-            particularly
-          </p>
-        </div>
-        <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue">
-          <p className="text-justify text-xl text-white m-3 p-3">
-            passionate about basketball. This energy extends into my personal
-            pursuits where I enjoy exploring the world and discovering new
-            things. Whether it’s staying updated with the latest tech
-            innovations or delving into books on personal growth, I am always
-            learning.<br></br>
+            particularly passionate about basketball. This energy extends into
+            my personal pursuits where I enjoy exploring the world and
+            discovering new things. Whether it’s staying updated with the latest
+            tech innovations or delving into books on personal growth, I am
+            always learning.<br></br>
             <br></br>I am known for my devotion and reliability, consistently
             standing firm in my commitments. I thrive on setting myself
             challenges and overcoming them, which aligns with my professional
@@ -89,6 +84,39 @@ export default function AboutMe() {
                 alt="clickPhoto"
               />
             </a>
+          </div>
+        </div>
+        <div className="w-[32rem]">
+          <div className="bg-DarkBlue w-full flex flex-col rounded-lg border-LightBlue overflow-hidden">
+            <div className="w-full flex flex-row items-start">
+              <div className="bg-white w-[14rem] h-[14rem]"></div>
+              <div className="flex flex-col p-3">
+                <AboutData subTitle="name" title="Jaka Potokar" />
+                <AboutData subTitle="a.k.a." title="BChainBuddy" />
+                <AboutData subTitle="location" title="Slovenia" />
+                <AboutData subTitle="timezone" title="CET" />
+                <AboutData subTitle="time" title="11:00" />
+              </div>
+            </div>
+            <div className="flex flex-col text-white p-8 gap-y-3">
+              <AboutData
+                subTitle="education"
+                title="Masters of Business Informatics(last year)"
+              />
+              <AboutData
+                subTitle="hobbies"
+                title="Basketball, Technology, Fishing and Reading"
+              />
+              <div className="flex flex-col gap-y-2 mt-2">
+                <p className="text-LightBlue text-xl font-mono">Expertise</p>
+                <div className="flex flex-row gap-x-3">
+                  <ExpertiseImage src="/react3.png" alt="React" />
+                  <ExpertiseImage src="/nextjs.png" alt="Nextjs" />
+                  <ExpertiseImage src="/solidity.png" alt="Solidity" />
+                  <ExpertiseImage src="/hardhat.png" alt="Hardhat" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -171,3 +199,26 @@ export default function AboutMe() {
     </div>
   );
 }
+
+const AboutData = ({
+  subTitle,
+  title,
+}: {
+  subTitle: string;
+  title: string;
+}) => {
+  return (
+    <p className="text-white text-lg">
+      <span className="text-LightBlue text-sm font-mono">{subTitle} </span>
+      {title}
+    </p>
+  );
+};
+
+const ExpertiseImage = ({ src, alt }: { src: string; alt: string }) => {
+  return (
+    <div className="h-14 w-14 relative rounded-xl overflow-hidden">
+      <Image src={src} fill className="object-cover" alt={alt} />
+    </div>
+  );
+};
