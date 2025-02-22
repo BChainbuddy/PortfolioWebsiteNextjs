@@ -160,7 +160,9 @@ export default function ProjectList() {
         ))}
       </div>
       <motion.div
-        className="project-list sm:hidden lg:grid overflow-hidden mt-[2rem] mx-auto"
+        className={`project-list sm:hidden lg:grid overflow-hidden mx-auto ${
+          open && "mt-[6rem]"
+        }`}
         ref={gridRef2}
         initial={false}
         animate={{ maxHeight: open ? maxHeight : 0 }}

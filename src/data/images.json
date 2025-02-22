@@ -1,0 +1,22 @@
+{
+  "react": "/react3.png",
+  "redux": "/Redux.png",
+  "nextjs": "/nextjsLogo.png",
+  "tailwind": "/Tailwindcss.png",
+  "html": "/html5.png",
+  "css": "/cssLogo.png",
+  "javascript": "/javascript.png",
+  "nodejs": "/nodejsLogo.jpg",
+  "solidity": "/solidity.png",
+  "python": "/python.png",
+  "hardhat": "/hardhat.png",
+  "ethers": "/ethers.png",
+  "expressjs": "/expressjs.png",
+  "golang": "/GoLogo.png",
+  "postgresql": "/postgresql.jpg",
+  "graphql": "/graphql.png",
+  "mongodb": "/MongoDBLogo.png",
+  "prisma": "/prisma.png",
+  "typescript": "/typescript.png",
+  "openai": "/openai.png"
+}

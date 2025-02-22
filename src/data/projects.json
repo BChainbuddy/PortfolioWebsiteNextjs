@@ -25,7 +25,7 @@
     "github_url": "https://github.com/BChainbuddy/E-commerce_react",
     "demo_url": "https://e-commerce-react-3uf0.onrender.com",
     "img_src": "/Be-BETTER_screenshot.png",
-    "category": ["react", "javascript", "express", "postgresql"]
+    "category": ["react", "javascript", "expressjs", "postgresql"]
   },
   {
     "description": "Seadex is a decentralized exchange utilizing an Automated Market Maker (AMM) for seamless token swaps and yield earning. Users can provide liquidity and launch new pools, fostering an active DeFi ecosystem. The platform is built with Next.js, offering an intuitive and powerful user experience.",

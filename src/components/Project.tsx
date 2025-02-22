@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import IMAGES from "@/data/images.json";
 
 interface projectProps {
   project: {
@@ -8,6 +9,7 @@ interface projectProps {
     github_url: string;
     demo_url?: string;
     description: string;
+    category: string[];
   };
   index: number;
   columns: number;
@@ -28,7 +30,7 @@ export default function Project({ project, index, columns }: projectProps) {
 
   return (
     <div
-      className={`flex flex-col w-[22rem] space-y-4 project-start ${
+      className={`flex flex-col w-[22rem] gap-y-4 project-start ${
         seeProject ? "project-end" : ""
       }`}
       ref={ref}
@@ -71,8 +73,25 @@ export default function Project({ project, index, columns }: projectProps) {
           </div>
         </div>
       </div>
-      <div className="backdrop-blur-lg darkGreenBackground border-LightBlue rounded-xl">
-        <p className="text-justify text-white  m-3">{project.description}</p>
+      <div className="backdrop-blur-lg darkGreenBackground border-LightBlue rounded-xl p-3">
+        <p className="text-justify text-white">{project.description}</p>
+        <div className="w-full flex flex-row gap-x-3 mt-3">
+          {project.category.map((category: string) => {
+            const key = category.toLowerCase() as keyof typeof IMAGES;
+            return (
+              <div className="relative h-7 w-7 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                <Image
+                  src={IMAGES[key]}
+                  alt={category}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-auto object-center"
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
