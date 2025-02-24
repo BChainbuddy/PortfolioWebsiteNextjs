@@ -1,6 +1,17 @@
+import AboutParagraph from "@/components/AboutParagraph";
 import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
 import Link from "next/link";
+
+const data = [
+  "Hello! I’m Jaka , a full-stack developer from Slovenia with a keen interest in both web2 and web3 technologies. Currently pursuing a master’s in business informatics at the School of Economics and Business Ljubljana, I combine solid business knowledge with technical expertise to create impactful digital solutions.",
+  "Over the past 2.5 years, I have immersed myself in the development world, gaining hands-on experience and a deep understanding of various programming languages and frameworks. My educational journey is complemented by professional certifications, including a prestigious Full Stack Developer Career Path. This certification, among others, stands testament to my dedication and capability in tackling diverse and complex technical challenges.",
+  "In the realm of development, I thrive on learning and employing cutting-edge technologies. My portfolio spans dynamic e-commerce platforms to sophisticated decentralized applications, showcasing my ability to handle complex technical tasks. My enthusiasm for the latest tech innovations keeps me continuously evolving and at the forefront of the industry.",
+  "Outside of coding, I am an avid sports enthusiast and fitness buff, particularly passionate about basketball. This energy extends into my personal pursuits where I enjoy exploring the world and discovering new things. Whether it’s staying updated with the latest tech innovations or delving into books on personal growth, I am always learning.",
+  "I am known for my devotion and reliability, consistently standing firm in my commitments. I thrive on setting myself challenges and overcoming them, which aligns with my professional work where I am dedicated to delivering projects with precision and passion.",
+  "I am also a social individual who loves connecting with people from diverse backgrounds. Every interaction is an opportunity to learn and grow together, which is why I value my time collaborating with others, whether in hackathons or team projects.",
+  "Feel free to connect with me or explore my work further through my site. Let’s collaborate to create something exceptional!",
+];
 
 export default function AboutMe() {
   return (
@@ -8,60 +19,12 @@ export default function AboutMe() {
       <PageTitle title="ABOUT ME" />
       <div className="lg:flex flex-row justify-center space-x-32 sm:hidden">
         <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue p-3">
-          <p className="text-justify text-xl text-white m-3 indent-8 ">
-            Hello! I’m Jaka , a full-stack developer from Slovenia with a keen
-            interest in both web2 and web3 technologies. Currently pursuing a
-            master’s in business informatics at the School of Economics and
-            Business Ljubljana, I combine solid business knowledge with
-            technical expertise to create impactful digital solutions.<br></br>
-            <br></br>
-            Over the past 2.5 years, I have immersed myself in the development
-            world, gaining hands-on experience and a deep understanding of
-            various programming languages and frameworks. My educational journey
-            is complemented by professional certifications, including a
-            prestigious Full Stack Developer Career Path{" "}
-            <Link
-              href={
-                "https://www.codecademy.com/profiles/JakaPotokar/certificates/ffd0f42cce1a44e9a0108b365047a0a6"
-              }
-              className="text-cyan-400 hover:text-cyan-600 underline"
-              target="_blank"
-            >
-              certificate from Codecademy
-            </Link>
-            . This certification, among others, stands testament to my
-            dedication and capability in tackling diverse and complex technical
-            challenges.<br></br>
-            <br></br>
-            In the realm of development, I thrive on learning and employing
-            cutting-edge technologies. My portfolio spans dynamic e-commerce
-            platforms to sophisticated decentralized applications, showcasing my
-            ability to handle complex technical tasks. My enthusiasm for the
-            latest tech innovations keeps me continuously evolving and at the
-            forefront of the industry.<br></br>
-            <br></br>
-            Outside of coding, I am an avid sports enthusiast and fitness buff,
-            particularly passionate about basketball. This energy extends into
-            my personal pursuits where I enjoy exploring the world and
-            discovering new things. Whether it’s staying updated with the latest
-            tech innovations or delving into books on personal growth, I am
-            always learning.<br></br>
-            <br></br>I am known for my devotion and reliability, consistently
-            standing firm in my commitments. I thrive on setting myself
-            challenges and overcoming them, which aligns with my professional
-            work where I am dedicated to delivering projects with precision and
-            passion.<br></br>
-            <br></br>I am also a social individual who loves connecting with
-            people from diverse backgrounds. Every interaction is an opportunity
-            to learn and grow together, which is why I value my time
-            collaborating with others, whether in hackathons or team projects.
-            <br></br>
-            <br></br>
-            Feel free to connect with me or explore my work further through my
-            site. Let’s collaborate to create something exceptional!<br></br>
-            <br></br>
-          </p>
-          <div className="p-10 flex flex-row justify-center space-x-1">
+          <div className="flex flex-col gap-y-10 m-3">
+            {data.map((paragraph) => (
+              <AboutParagraph value={paragraph} />
+            ))}
+          </div>
+          <div className="p-10 pb-24 flex flex-row justify-center space-x-1">
             <a
               href="/CV_Jaka_Potokar.pdf"
               target="_blank"
