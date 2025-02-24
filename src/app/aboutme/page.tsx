@@ -76,7 +76,15 @@ export default function AboutMe() {
         <div className="w-[32rem] flex flex-col gap-y-4">
           <div className="bg-DarkBlue w-full flex flex-col rounded-lg border-LightBlue overflow-hidden">
             <div className="w-full flex flex-row items-start">
-              <div className="bg-white w-[14rem] h-[14rem]"></div>
+              <div className="bg-white lg:w-[14rem] lg:h-[15rem] md:w-[12rem] md:h-[15rem] relative rounded-md overflow-hidden">
+                <Image
+                  src="/jakaOsebna.jpg"
+                  alt="Picture of Jaka"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-col p-3">
                 <AboutData subTitle="name" title="Jaka Potokar" />
                 <AboutData subTitle="a.k.a." title="BChainBuddy" />
@@ -129,7 +137,15 @@ export default function AboutMe() {
       <div className="flex flex-col p-[5%] gap-y-6 md:hidden">
         <div className="bg-DarkBlue w-full flex flex-col rounded-3xl  border-LightBlue overflow-hidden">
           <div className="w-full flex flex-row items-start">
-            <div className="bg-white w-[9rem] h-[9rem]"></div>
+            <div className="bg-white h-[13rem] w-[11rem] relative rounded-md overflow-hidden">
+              <Image
+                src="/jakaOsebna.jpg"
+                alt="Picture of Jaka"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
             <div className="flex flex-col p-3">
               <AboutData subTitle="name" title="Jaka Potokar" />
               <AboutData subTitle="a.k.a." title="BChainBuddy" />
@@ -219,7 +235,7 @@ const AboutData = ({
 }) => {
   return (
     <p className="text-white lg:text-lg text-base md:mb-1 lg:mb-0">
-      <span className="text-LightBlue lg:text-sm text-xs font-mono md:block lg:inline">
+      <span className="text-LightBlue lg:text-sm text-xs font-mono block lg:inline">
         {subTitle}{" "}
       </span>
       {title}
