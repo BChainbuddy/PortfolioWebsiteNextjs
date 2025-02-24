@@ -15,7 +15,7 @@ export default function AboutMe() {
             Business Ljubljana, I combine solid business knowledge with
             technical expertise to create impactful digital solutions.<br></br>
             <br></br>
-            Over the past 1.5 years, I have immersed myself in the development
+            Over the past 2.5 years, I have immersed myself in the development
             world, gaining hands-on experience and a deep understanding of
             various programming languages and frameworks. My educational journey
             is complemented by professional certifications, including a
@@ -86,7 +86,7 @@ export default function AboutMe() {
             </a>
           </div>
         </div>
-        <div className="w-[32rem]">
+        <div className="w-[32rem] flex flex-col gap-y-4">
           <div className="bg-DarkBlue w-full flex flex-col rounded-lg border-LightBlue overflow-hidden">
             <div className="w-full flex flex-row items-start">
               <div className="bg-white w-[14rem] h-[14rem]"></div>
@@ -117,6 +117,25 @@ export default function AboutMe() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="darkGreenBackground w-full flex flex-col rounded-lg border-LightBlue overflow-hidden p-8 gap-y-5">
+            <p className="text-LightBlue text-2xl font-mono text-center">
+              Experience
+            </p>
+            <ExperienceInfo
+              description="Mainly focused on front-end technologies such as React, React Native, Nextjs, also done little Solidity with Hardhat framework"
+              company="Niov Labs"
+              title="Front-end Developer"
+              start="Aug 2024"
+              end="Present"
+            />
+            <ExperienceInfo
+              description="This was project made for hackaton ETH Toronto, I was in charge of creating the frontend for our Dapp"
+              company="Run Bro"
+              title="Front-end Developer"
+              start="Jul 2024"
+              end="Aug 2024"
+            />
           </div>
         </div>
       </div>
@@ -219,6 +238,33 @@ const ExpertiseImage = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <div className="h-14 w-14 relative rounded-xl overflow-hidden">
       <Image src={src} fill className="object-cover" alt={alt} />
+    </div>
+  );
+};
+
+const ExperienceInfo = ({
+  description,
+  company,
+  title,
+  start,
+  end,
+}: {
+  description: string;
+  company: string;
+  title: string;
+  start: string;
+  end: string;
+}) => {
+  return (
+    <div className="flex flex-col">
+      <div className="flex flex-row justify-between">
+        <p className="text-lg font-mono text-white">{company}</p>
+        <p className="text-white text-sm">
+          {start} - {end}
+        </p>
+      </div>
+      <p className="text-2xl font-mono font-black text-LightBlue">{title}</p>
+      <p className="text-base text-white">{description}</p>
     </div>
   );
 };
