@@ -1,7 +1,10 @@
+"use client";
+
 import AboutParagraph from "@/components/AboutParagraph";
 import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const data = [
   "Hello! I’m Jaka , a full-stack developer from Slovenia with a keen interest in both web2 and web3 technologies. Currently pursuing a master’s in business informatics at the School of Economics and Business Ljubljana, I combine solid business knowledge with technical expertise to create impactful digital solutions.",
@@ -14,14 +17,35 @@ const data = [
 ];
 
 export default function AboutMe() {
+  const [time, setTime] = useState("00:00");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const options = {
+        timeZone: "Europe/Ljubljana",
+        hour: "numeric" as "numeric",
+        minute: "numeric" as "numeric",
+        hour12: true,
+      };
+      const sloveniaTime = new Date().toLocaleTimeString("en-US", options);
+      setTime(sloveniaTime);
+    };
+
+    updateTime();
+
+    const intervalId = setInterval(updateTime, 15000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8 overflow-hidden">
       <PageTitle title="ABOUT ME" />
       <div className="md:flex flex-row justify-center lg:gap-x-32 md:gap-x-14 hidden md:px-[2%] lg:px-[0]">
         <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue p-3">
           <div className="flex flex-col gap-y-10 m-3">
-            {data.map((paragraph) => (
-              <AboutParagraph value={paragraph} />
+            {data.map((paragraph, index) => (
+              <AboutParagraph value={paragraph} key={index} />
             ))}
           </div>
           <div className="p-10 pb-24 flex flex-row justify-center space-x-1">
@@ -58,7 +82,7 @@ export default function AboutMe() {
                 <AboutData subTitle="a.k.a." title="BChainBuddy" />
                 <AboutData subTitle="location" title="Slovenia" />
                 <AboutData subTitle="timezone" title="CET" />
-                <AboutData subTitle="time" title="11:00" />
+                <AboutData subTitle="time" title={time} />
               </div>
             </div>
             <div className="flex flex-col text-white p-8 gap-y-3">
@@ -111,7 +135,7 @@ export default function AboutMe() {
               <AboutData subTitle="a.k.a." title="BChainBuddy" />
               <AboutData subTitle="location" title="Slovenia" />
               <AboutData subTitle="timezone" title="CET" />
-              <AboutData subTitle="time" title="11:00" />
+              <AboutData subTitle="time" title={time} />
             </div>
           </div>
           <div className="flex flex-col text-white p-8 gap-y-3">
@@ -157,8 +181,8 @@ export default function AboutMe() {
         </div>
         <div className="darkGreenBackground w-full rounded-3xl border-LightBlue sm:mb-16 pb-10">
           <div className="flex flex-col gap-y-10 m-[5%]">
-            {data.map((paragraph) => (
-              <AboutParagraph value={paragraph} />
+            {data.map((paragraph, index) => (
+              <AboutParagraph value={paragraph} key={index} />
             ))}
           </div>
           <div className="p-2 rounded-2xl flex flex-row justify-center space-x-1">
