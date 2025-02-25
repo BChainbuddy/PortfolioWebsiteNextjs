@@ -78,7 +78,7 @@ export default function AboutMe() {
             <div className="w-full flex flex-row items-start">
               <div className="bg-white lg:w-[14rem] lg:h-[15rem] md:w-[12rem] md:h-[15rem] relative rounded-md overflow-hidden">
                 <Image
-                  src="/jakaOsebna.jpg"
+                  src="/JakaOsebna.jpg"
                   alt="Picture of Jaka"
                   fill
                   sizes="100vw"
@@ -139,7 +139,7 @@ export default function AboutMe() {
           <div className="w-full flex flex-row items-start">
             <div className="bg-white h-[13rem] w-[11rem] relative rounded-md overflow-hidden">
               <Image
-                src="/jakaOsebna.jpg"
+                src="/JakaOsebna.jpg"
                 alt="Picture of Jaka"
                 fill
                 sizes="100vw"
