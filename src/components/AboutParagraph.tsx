@@ -7,7 +7,7 @@ export default function AboutParagraph({ value }: { value: string }) {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.9", "start 0.65"],
+    offset: ["start 0.8", "end 0.8"],
   });
 
   const words = value.split(" ");
@@ -38,9 +38,15 @@ const Word = ({
   const opacity = useTransform(progress, range, [0, 1]);
 
   return (
-    <span className="text-white lg:text-xl md:text-lg text-base font-medium relative">
-      <span className="absolute opacity-10">{children}</span>
-      <motion.span style={{ opacity }}>{children}</motion.span>
-    </span>
+    <>
+      {children !== "<br>" ? (
+        <span className="text-white lg:text-xl md:text-lg text-base font-medium relative">
+          <span className="absolute opacity-10">{children}</span>
+          <motion.span style={{ opacity }}>{children}</motion.span>
+        </span>
+      ) : (
+        <span className="w-full block mb-5"></span>
+      )}
+    </>
   );
 };
