@@ -22,13 +22,13 @@ export default function Contact() {
           <ImageAction
             src="/linkedin-icon-1024x1024-z5dvl47c.png"
             alt="LinkedIn Logo"
-            href="/linkedin-icon-1024x1024-z5dvl47c.png"
+            href="https://www.linkedin.com/in/jaka-potokar-14452627b/"
             animation="contact2"
           />
           <ImageAction
             src="/githubLogoForBackground.jpg"
             alt="Github Logo"
-            href="/githubLogoForBackground.jpg"
+            href="https://github.com/BChainbuddy"
             special="invert"
             animation="contact3"
           />
