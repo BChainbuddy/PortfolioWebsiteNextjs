@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="sm:items-center lg:h-[80vh] sm:h-[90vh] flex flex-row justify-center lg:space-x-28">
+    <div className="sm:items-center lg:h-[80vh] flex flex-row justify-center lg:space-x-28 my-[8vh] md:mt-0">
       <div className="space-y-10 sm:px-4 md:px-16 pb-12 pt-2 rounded-3xl border-contact">
         <PageTitle title="CONTACT ME" />
         <EmailForm />
