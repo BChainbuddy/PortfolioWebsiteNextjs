@@ -1,90 +1,103 @@
 [
   {
-    "description": "Development Quiz (DevQuiz) is a Next.js quiz game where players select topics and answer OpenAI-generated questions. The app tracks their history and stats using PostgreSQL and Prisma ORM.",
+    "title": "DEV QUIZ",
+    "description": "A Next.js quiz game where players select topics and answer OpenAI-generated questions, tracking stats with PostgreSQL and Prisma.",
     "github_url": "https://github.com/BChainbuddy/DevelopmentQuiz",
     "demo_url": "https://developmentquiz.vercel.app/",
     "img_src": "/DevelopmentQuiz2.png",
     "category": ["nextjs", "prisma", "postgresql", "openai", "typescript"]
   },
   {
-    "description": "Otzar.ai is a fully responsive landing page crafted with React and powered by an Express backend that efficiently processes whitelist requests. It offers a seamless and dynamic user experience tailored for modern web standards.",
+    "title": "OTZAR.AI",
+    "description": "A responsive landing page built with React and Express that processes whitelist requests, offering a seamless user experience.",
     "github_url": "",
     "demo_url": "otzar.ai",
     "img_src": "/otzarai.png",
     "category": ["react", "express"]
   },
   {
-    "description": "Yuletide Token is presented through a fully responsive landing page built with React and styled-components. It effectively showcases the token’s features with a modern design, engaging animations, and a smooth interactive experience.",
+    "title": "YULETIDE TOKEN",
+    "description": "A responsive React landing page using styled-components to showcase token features with modern design and smooth animations.",
     "github_url": "",
     "demo_url": "yulemagic.comm",
     "img_src": "/yuletide.png",
     "category": ["react"]
   },
   {
-    "description": "RunBro is designed to encourage a healthier lifestyle through daily physical activities, particularly running. By offering rewards for achieving personal fitness goals, it motivates users to stay active. My role in the project was developing the frontend using Next.js.",
+    "title": "RUNBRO",
+    "description": "A fitness app encouraging daily running with rewards for achieving goals, with the frontend developed in Next.js.",
     "github_url": "https://github.com/RunBroHackaton",
     "demo_url": "https://dorahacks.io/buidl/14329",
     "img_src": "/RunBro.png",
     "category": ["javascript", "nextjs"]
   },
   {
-    "description": "This project showcases a fully functional blockchain based on the Proof-of-Work consensus mechanism, developed using Go. It includes a user interface for wallets and handles server interactions.",
+    "title": "GOLANG BLOCKCHAIN",
+    "description": "A fully functional blockchain built with Go, featuring a wallet UI and handling server interactions.",
     "github_url": "https://github.com/BChainbuddy/golang_blockchain",
     "demo_url": "",
     "img_src": "/golangBlockchain.png",
     "category": ["golang"]
   },
   {
-    "description": "WeaveSwap combines a decentralized exchange and a lending protocol, created for the BNB Hackathon. I was responsible for designing and deploying all smart contracts powering the platform.",
+    "title": "WEAVESWAP",
+    "description": "A decentralized exchange and lending protocol built for the BNB Hackathon, with smart contracts designed and deployed for the platform.",
     "github_url": "https://github.com/WeaveSwap/smart-contracts",
     "demo_url": "https://weaveonbnb.vercel.app/",
     "img_src": "/WeaveSwap.png",
     "category": ["javascript", "solidity", "hardhat"]
   },
   {
-    "description": "A decentralized token bridge that facilitates secure cross-chain token transfers. Built with Solidity and Hardhat, it employs secure signing methods to ensure transactional integrity.",
+    "title": "TOKEN BRIDGE",
+    "description": "A decentralized token bridge for secure cross-chain transfers, built with Solidity and Hardhat using secure signing methods.",
     "github_url": "https://github.com/BChainbuddy/TokenBridge",
     "demo_url": "",
     "img_src": "/CryptoBridge.jpeg",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
-    "description": "A robust backend for an e-commerce platform built with Express.js and PostgreSQL. It manages user accounts, authentication (via Passport and cookies), orders, and shopping cart functionalities.",
+    "title": "E-COMMERCE BACKEND",
+    "description": "A robust Express.js backend for an e-commerce platform that manages accounts, authentication, orders, and shopping carts.",
     "github_url": "https://github.com/BChainbuddy/E-commerce_express",
     "demo_url": "",
     "img_src": "/node-express-web-server.png",
     "category": ["javascript"]
   },
   {
-    "description": "A fully-featured liquidity pool developed with Solidity, JavaScript, and Hardhat. It supports token swaps, liquidity provision, and yield farming, offering DeFi users a comprehensive trading solution.",
+    "title": "LIQUIDITY POOL",
+    "description": "A full-featured liquidity pool built with Solidity, JavaScript, and Hardhat that supports token swaps, liquidity, and yield farming.",
     "github_url": "https://github.com/BChainbuddy/LiquidityPool",
     "demo_url": "",
     "img_src": "/liquiditypool.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
-    "description": "An ERC-1155-based smart contract for creating multiple game items like avatars, power-ups, and in-game currencies. It uses Chainlink VRF for generating random outcomes when interacting with item packs.",
+    "title": "ERC-1155 GAME ITEMS",
+    "description": "A smart contract for creating game items like avatars and power-ups using ERC-1155, with Chainlink VRF for random outcomes.",
     "github_url": "https://github.com/BChainbuddy/ERC-1155_GameItems",
     "demo_url": "",
     "img_src": "/erc1155.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
-    "description": "A decentralized charity funding DAO built with OpenZeppelin contracts. This project streamlines charity funding by minimizing intermediary costs and making the process fast, transparent, and reliable.",
+    "title": "CHARITY DAO",
+    "description": "A decentralized charity funding DAO built with OpenZeppelin contracts, streamlining funding with transparency and low intermediary costs.",
     "github_url": "https://github.com/BChainbuddy/CharityDAO.git",
     "demo_url": "",
     "img_src": "/dao.png",
     "category": ["solidity", "javascript", "hardhat"]
   },
   {
-    "description": "A full implementation of the EIP712 standard, designed for secure wallet signatures. This was my contribution to the wallet-signature project, built using the Foundry framework.",
+    "title": "WALLET SIGNATURE",
+    "description": "An implementation of the EIP712 standard for secure wallet signatures, developed using the Foundry framework.",
     "github_url": "https://github.com/wiasliaw/wallet-signature/pull/3",
     "demo_url": "",
     "img_src": "/EIP712Img.png",
     "category": ["solidity", "javascript"]
   },
   {
-    "description": "A fully automated trading bot written in Python, utilizing the Double Supertrend strategy alongside Heikin Ashi candles for enhanced accuracy. The bot trades on Binance, leveraging API integrations for real-time market data.",
+    "title": "TRADING BOT",
+    "description": "A Python trading bot using the Double Supertrend strategy with Heikin Ashi candles, trading on Binance via API integrations.",
     "github_url": "https://github.com/BChainbuddy/TradingBot",
     "demo_url": "",
     "img_src": "/PythonTrading.jpg",
