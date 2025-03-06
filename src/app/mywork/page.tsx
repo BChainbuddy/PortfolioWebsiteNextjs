@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectList from "@/components/ProjectList";
-import PROJECTS from "../../data/projects.json";
+import PROJECTS from "../../data/frontEndProjects.json";
 import ProjectSm from "@/components/ProjectSm";
 import PageTitle from "@/components/PageTitle";
 

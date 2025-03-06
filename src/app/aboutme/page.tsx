@@ -3,7 +3,6 @@
 import AboutParagraph from "@/components/AboutParagraph";
 import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const data = [

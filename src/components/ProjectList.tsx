@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import PROJECTS from "../data/projects.json";
+import PROJECTS from "@/data/frontEndProjects.json";
 import Project from "./Project";
 import FilterOption from "./FilterOption";
 import { motion } from "framer-motion";
