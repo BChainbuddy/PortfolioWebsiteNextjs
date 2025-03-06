@@ -13,7 +13,7 @@
     "github_url": "",
     "demo_url": "https://otzar.ai",
     "img_src": "/otzarai.png",
-    "category": ["react", "express"]
+    "category": ["react", "expressjs"]
   },
   {
     "title": "YULETIDE TOKEN",
@@ -61,7 +61,7 @@
     "github_url": "https://github.com/BChainbuddy/E-commerce_express",
     "demo_url": "",
     "img_src": "/node-express-web-server.png",
-    "category": ["javascript"]
+    "category": ["javascript", "expressjs"]
   },
   {
     "title": "LIQUIDITY POOL",

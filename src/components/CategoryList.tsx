@@ -9,6 +9,7 @@ export default function CategoryList({ categories }: { categories: string[] }) {
         return (
           <div className="relative h-7 w-7 rounded-lg overflow-hidden bg-white flex items-center justify-center">
             <Image
+              key={category}
               src={IMAGES[key]}
               alt={category}
               width={0}

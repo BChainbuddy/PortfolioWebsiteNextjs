@@ -4,6 +4,7 @@ import ProjectList from "@/components/ProjectList";
 import PROJECTS from "../../data/frontEndProjects.json";
 import ProjectSm from "@/components/ProjectSm";
 import PageTitle from "@/components/PageTitle";
+import Project from "@/components/Project";
 
 export default function MyWork() {
   return (
@@ -12,7 +13,7 @@ export default function MyWork() {
       <ProjectList />
       <div className="sm:flex lg:hidden sm:mt-20 md:mt-0 sm:flex-col sm:pb-20 md:pb-10 md:px-16 md:pt-16 md:py-10 sm:space-y-20 md:space-y-20 sm:items-center md:items-center">
         {PROJECTS.map((project, i) => (
-          <ProjectSm project={project} index={i} key={i} />
+          <Project project={project} index={i} key={i} />
         ))}
       </div>
     </div>

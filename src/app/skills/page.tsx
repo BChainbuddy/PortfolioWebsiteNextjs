@@ -8,7 +8,7 @@ export default function Skills() {
   return (
     <>
       <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 pb-8">
-        <PageTitle title="TECHNOLOGIES" />
+        <PageTitle title="TECHNOLOGIES I'VE USED" />
         <div className="lg:flex place-items-center sm:hidden lg:space-y-20 lg:flex-col pr-48 items-start mx-auto">
           <div className="flex">
             <div className="flex-row flex items-center space-x-10 w-full">
