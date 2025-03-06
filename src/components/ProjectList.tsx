@@ -42,7 +42,7 @@ export default function ProjectList() {
         const gridWidth = gridRef?.current.offsetWidth || 0;
         const fontSize = getComputedStyle(gridRef.current).fontSize;
         const fontSizeInPx = parseFloat(fontSize);
-        const columns = Math.floor(gridWidth / (fontSizeInPx * 23));
+        const columns = Math.floor(gridWidth / (fontSizeInPx * 28));
         setColumnCount(columns);
       }
     };
@@ -54,7 +54,7 @@ export default function ProjectList() {
 
   return (
     <>
-      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center w-[85%] mx-auto px-[2%]">
+      <div className="lg:flex sm:hidden md:py-4 md:mt-4 justify-between items-center w-[90%] max-w-[90rem] mx-auto px-[2%]">
         <h2 className="text-2xl relative text-LightBlue font-mono font-semibold flex justify-center items-center w-[15rem]">
           <span
             className={`absolute transition-all duration-500 w-full ${
@@ -147,8 +147,8 @@ export default function ProjectList() {
         </div>
       </div>
       <div
-        className={`project-list sm:hidden lg:grid pt-[3rem] mx-auto`}
         ref={gridRef}
+        className={`sm:hidden lg:flex flex-wrap gap-4 justify-center pt-[3rem] mx-auto w-[90%] max-w-[90rem] gap-y-[3rem] gap-x-[2rem] `}
       >
         {projects.slice(0, columnCount).map((project, i) => (
           <Project
@@ -160,13 +160,13 @@ export default function ProjectList() {
         ))}
       </div>
       <motion.div
-        className={`project-list sm:hidden lg:grid overflow-hidden mx-auto ${
-          open && "mt-[6rem]"
+        className={`sm:hidden lg:flex flex-wrap gap-4 justify-center overflow-hidden mx-auto w-[90%] max-w-[90rem] gap-y-[3rem] gap-x-[2rem] ${
+          open && "mt-[3rem]"
         }`}
-        ref={gridRef2}
         initial={false}
         animate={{ maxHeight: open ? maxHeight : 0 }}
         transition={{ duration: 2, ease: "easeInOut" }}
+        ref={gridRef2}
       >
         {projects.slice(columnCount).map((project, i) => (
           <Project
