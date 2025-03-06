@@ -31,13 +31,15 @@ export default function Project({ project, index, columns }: projectProps) {
   }, [inView]);
 
   return (
-    <GradientBox className="bg-gradient-to-tr p-0.5 w-[26rem] rounded-2xl">
+    <GradientBox
+      className={`bg-gradient-to-tr p-0.5 w-[26rem] rounded-2xl project-start ${
+        seeProject ? "project-end" : ""
+      }`}
+      style={{ transitionDelay: `${((index % columns) + 1) * 100}ms` }}
+    >
       <div
-        className={`flex flex-col project-start bg-DarkBlue opacity-35 h-[35rem] p-4 rounded-2xl ${
-          seeProject ? "project-end" : ""
-        }`}
+        className={`flex flex-col bg-DarkBlue h-[34rem] p-4 rounded-2xl`}
         ref={ref}
-        style={{ transitionDelay: `${((index % columns) + 1) * 100}ms` }}
       >
         <div className="relative h-[15rem] w-full rounded-lg overflow-hidden">
           <Image src={project.img_src} alt={`Photo of project ${index}`} fill />
@@ -48,6 +50,35 @@ export default function Project({ project, index, columns }: projectProps) {
         <div className="w-[95%] mx-auto">
           <p className="text-white">{project.description}</p>
           <CategoryList categories={project.category} />
+        </div>
+        <div className="mt-auto flex justify-between w-full px-8 pb-4">
+          {project.demo_url && (
+            <a
+              href={project.demo_url}
+              target="_blank"
+              rel="noreferrer"
+              className="drop-shadow-[0px_0px_0.3rem_#00D19D] hover:drop-shadow-[0px_0px_0.6rem_#00D19D] traansition-all duration-300 ease-out"
+            >
+              <GradientBox className="bg-gradient-to-r rounded-3xl h-12 w-36 flex items-center justify-center">
+                <p className="text-base font-mono">LIVE PREVIEW</p>
+              </GradientBox>
+            </a>
+          )}
+          {project.github_url && (
+            <a
+              href={project.github_url}
+              target="_blank"
+              rel="noreferrer"
+              className="drop-shadow-[0px_0px_0.3rem_#FFFFFF] hover:drop-shadow-[0px_0px_0.6rem_#FFFFFF] transition-all duration-300 ease-out"
+            >
+              <div className="rounded-3xl flex-row gap-x-2 h-12 w-36 flex items-center justify-center bg-white border-[0.2rem] border-[#323131]">
+                <p className="text-[#323131] text-base font-mono">SOURCE</p>
+                <div className="relative h-7 w-7">
+                  <Image src="GithubLogo.svg" alt="Github Logo" fill />
+                </div>
+              </div>
+            </a>
+          )}
         </div>
       </div>
     </GradientBox>

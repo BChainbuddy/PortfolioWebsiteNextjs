@@ -11,7 +11,7 @@
     "title": "OTZAR.AI",
     "description": "A responsive landing page built with React and Express that processes whitelist requests, offering a seamless user experience.",
     "github_url": "",
-    "demo_url": "otzar.ai",
+    "demo_url": "https://otzar.ai",
     "img_src": "/otzarai.png",
     "category": ["react", "express"]
   },
@@ -19,7 +19,7 @@
     "title": "YULETIDE TOKEN",
     "description": "A responsive React landing page using styled-components to showcase token features with modern design and smooth animations.",
     "github_url": "",
-    "demo_url": "yulemagic.comm",
+    "demo_url": "https://yulemagic.com",
     "img_src": "/yuletide.png",
     "category": ["react"]
   },
