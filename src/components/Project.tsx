@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import CategoryList from "./CategoryList";
+import GradientBox from "./GradientBox";
 
 interface projectProps {
   project: {
@@ -30,24 +31,25 @@ export default function Project({ project, index, columns }: projectProps) {
   }, [inView]);
 
   return (
-    <div
-      className={`flex flex-col w-[26rem] project-start bg-DarkBlue h-[35rem] p-3 ${
-        seeProject ? "project-end" : ""
-      }`}
-      ref={ref}
-      style={{ transitionDelay: `${((index % columns) + 1) * 100}ms` }}
-    >
-      <div className="relative h-[15rem] w-full rounded-lg overflow-hidden">
-        <Image src={project.img_src} alt={`Photo of project ${index}`} fill />
+    <GradientBox className="bg-gradient-to-tr p-0.5 w-[26rem] rounded-2xl">
+      <div
+        className={`flex flex-col project-start bg-DarkBlue opacity-35 h-[35rem] p-4 rounded-2xl ${
+          seeProject ? "project-end" : ""
+        }`}
+        ref={ref}
+        style={{ transitionDelay: `${((index % columns) + 1) * 100}ms` }}
+      >
+        <div className="relative h-[15rem] w-full rounded-lg overflow-hidden">
+          <Image src={project.img_src} alt={`Photo of project ${index}`} fill />
+        </div>
+        <p className="text-2xl font-mono font-semibold text-white mt-3 mb-1 ml-4">
+          {project.title}
+        </p>
+        <div className="w-[95%] mx-auto">
+          <p className="text-white">{project.description}</p>
+          <CategoryList categories={project.category} />
+        </div>
       </div>
-      <p className="text-2xl font-mono font-semibold text-white mt-2 ml-4">
-        {project.title}
-      </p>
-      <div className="relative group rounded-md overflow-hidden"></div>
-      <div className="w-[95%] mx-auto">
-        <p className="text-justify text-white">{project.description}</p>
-        <CategoryList categories={project.category} />
-      </div>
-    </div>
+    </GradientBox>
   );
 }
