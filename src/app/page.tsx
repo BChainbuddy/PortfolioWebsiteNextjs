@@ -1,11 +1,12 @@
 import ImageAction from "@/components/ImageAction";
 import NameIntro from "@/components/NameIntro";
+import Spline from "@splinetool/react-spline/next";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <div className="h-[65vh] flex flex-row justify-center sm:items-center">
+      <div className="h-[65vh] flex sm:items-center justify-center">
         <div className="flex flex-col mt-10 sm:w-11/12 md:w-auto lg:min-w-max justify-evenly">
           <NameIntro />
           <div id="developer" className="homepage-start2 md:space-y-1 mt-4">
@@ -49,17 +50,21 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="lg:ml-48 md:ml-6 md:mt-6 lg:mt-0 md:flex sm:hidden">
-          <div className="lg:h-[45vh] lg:w-[45vh] md:h-60 md:w-60 relative">
-            <Image
+        <div className="h-full md:ml-6 md:mt-6 lg:mt-0 md:flex sm:hidden">
+          <div className="lg:h-[100%] lg:w-[40vw] md:h-60 md:w-60">
+            {/* <Image
               src="/man-technologist-light-skin-tone-svgrepo-com.svg"
               sizes="100%"
               fill
               alt="programmingEmoji"
-              className="img-shadow"
+              className="img-shadow lg:hidden"
               style={{
                 objectFit: "cover",
               }}
+            /> */}
+            <Spline
+              scene="https://prod.spline.design/Cr3d2UjW5GiANCyV/scene.splinecode"
+              className="hidden lg:block"
             />
           </div>
         </div>
