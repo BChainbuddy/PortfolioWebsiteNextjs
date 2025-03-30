@@ -1,7 +1,6 @@
 import ImageAction from "@/components/ImageAction";
 import NameIntro from "@/components/NameIntro";
-import Spline from "@splinetool/react-spline/next";
-import Image from "next/image";
+import SplineScene from "@/components/SplineScene";
 
 export default function Home() {
   return (
@@ -51,22 +50,7 @@ export default function Home() {
           </div>
         </div>
         <div className="h-full md:ml-6 md:mt-6 lg:mt-0 md:flex sm:hidden">
-          <div className="lg:h-[100%] lg:w-[40vw] md:h-60 md:w-60">
-            {/* <Image
-              src="/man-technologist-light-skin-tone-svgrepo-com.svg"
-              sizes="100%"
-              fill
-              alt="programmingEmoji"
-              className="img-shadow lg:hidden"
-              style={{
-                objectFit: "cover",
-              }}
-            /> */}
-            <Spline
-              scene="https://prod.spline.design/Cr3d2UjW5GiANCyV/scene.splinecode"
-              className="hidden lg:block"
-            />
-          </div>
+          <SplineScene />
         </div>
       </div>
       <div className="pt-6 pb-10 flex justify-center items-center h-[15vh]">

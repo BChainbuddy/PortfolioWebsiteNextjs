@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Image from "next/image";
-import VideoBackground from "@/components/VideoBackground";
+import Head from "next/head";
+// import VideoBackground from "@/components/VideoBackground";
 
 export const metadata: Metadata = {
   title: "Jaka's Portfolio",
@@ -31,25 +32,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col`}>
-        <Header />
-        <div id="content">{children}</div>
-        <div id="backgroundPicture" className="relative">
-          <Image
-            src="/backgroundBlurred.png"
-            alt="bakgroundPicture"
-            quality={100}
-            fill
-            sizes="100%"
-            placeholder="blur"
-            blurDataURL={"/img/logo.png"}
-            style={{
-              objectFit: "cover",
-            }}
+      <>
+        <Head>
+          <link
+            rel="preload"
+            href="https://prod.spline.design/Cr3d2UjW5GiANCyV/scene.splinecode"
+            as="fetch"
+            crossOrigin="anonymous"
           />
-          {/* <VideoBackground /> */}
-        </div>
-      </body>
+        </Head>
+        <body className={`flex flex-col`}>
+          <Header />
+          <div id="content">{children}</div>
+          <div id="backgroundPicture" className="relative">
+            <Image
+              src="/backgroundBlurred.png"
+              alt="bakgroundPicture"
+              quality={100}
+              fill
+              sizes="100%"
+              placeholder="blur"
+              blurDataURL={"/img/logo.png"}
+              style={{
+                objectFit: "cover",
+              }}
+            />
+            {/* <VideoBackground /> */}
+          </div>
+        </body>
+      </>
     </html>
   );
 }
