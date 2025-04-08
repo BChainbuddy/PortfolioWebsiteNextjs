@@ -1,18 +1,18 @@
-
 interface FilterOptionProps {
-  setFilter: (filter: string) => void;
+  toggleFilter: (option: string) => void;
   option: string;
   name: string;
-  filter: string;
+  filter: string[];
 }
 
-export default function FilterOption({ setFilter, option, name, filter } : FilterOptionProps) {
+export default function FilterOption({
+  toggleFilter,
+  option,
+  name,
+  filter,
+}: FilterOptionProps) {
   const handleClick = () => {
-    if (filter === option) {
-      setFilter("");
-    } else {
-      setFilter(option);
-    }
+    toggleFilter(option);
   };
 
   return (
@@ -26,7 +26,7 @@ export default function FilterOption({ setFilter, option, name, filter } : Filte
       <div className="w-1/3 my-auto">
         <div
           className={`border-LightBlue border-8 w-3 h-3 mx-auto ${
-            filter === option ? "bg-white" : ""
+            filter.includes(option) ? "bg-white" : ""
           }`}
         ></div>
       </div>

@@ -59,7 +59,6 @@ export default function Home() {
           className="homepage-start3 cursor-default sm:text-base md:text-lg lg:text-xl text-center font-thin font-mono text-transparent bg-clip-text custom-gradient-right"
         >
           "TURNING CHALLENGES INTO OPPORTUNITIES, ONE PROJECT AT A TIME."
-          {/* "BUILDING THE FUTURE, ONE LINE OF CODE AT A TIME." */}
         </p>
       </div>
     </>

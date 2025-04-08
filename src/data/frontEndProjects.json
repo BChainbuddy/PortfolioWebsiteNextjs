@@ -13,7 +13,7 @@
     "github_url": "",
     "demo_url": "https://otzar.ai",
     "img_src": "/otzarai.png",
-    "category": ["react", "expressjs"]
+    "category": ["react", "expressjs", "javascript"]
   },
   {
     "title": "YULETIDE TOKEN",
@@ -21,7 +21,7 @@
     "github_url": "",
     "demo_url": "https://yulemagic.com",
     "img_src": "/yuletide.png",
-    "category": ["react"]
+    "category": ["react", "javascript"]
   },
   {
     "title": "RUNBRO",

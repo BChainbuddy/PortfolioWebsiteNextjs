@@ -7,7 +7,8 @@ import FilterOption from "./FilterOption";
 import { motion } from "framer-motion";
 
 export default function ProjectList() {
-  const [filter, setFilter] = useState("");
+  // Change filter state to an array
+  const [filter, setFilter] = useState<string[]>([]);
   const [openFilter, setOpenFilter] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -18,17 +19,18 @@ export default function ProjectList() {
   const gridRef = useRef<HTMLDivElement>(null);
   const gridRef2 = useRef<HTMLDivElement>(null);
 
+  // Update max height when projects change or section is toggled
   useEffect(() => {
     if (gridRef2.current) {
-      // Update max height based on the scroll height of the content
-      setMaxHeight(gridRef2?.current.scrollHeight);
+      setMaxHeight(gridRef2.current.scrollHeight);
     }
   }, [projects, open]);
 
+  // Filter projects: only show projects that include all selected filter options.
   useEffect(() => {
-    if (filter) {
+    if (filter.length > 0) {
       const filteredProjects = PROJECTS.filter((project) =>
-        project.category.includes(filter)
+        filter.every((option) => project.category.includes(option))
       );
       setProjects(filteredProjects);
     } else {
@@ -36,10 +38,11 @@ export default function ProjectList() {
     }
   }, [filter]);
 
+  // Calculate column count on resize
   useEffect(() => {
     const handleResize = () => {
       if (gridRef.current) {
-        const gridWidth = gridRef?.current.offsetWidth || 0;
+        const gridWidth = gridRef.current.offsetWidth || 0;
         const fontSize = getComputedStyle(gridRef.current).fontSize;
         const fontSizeInPx = parseFloat(fontSize);
         const columns = Math.floor(gridWidth / (fontSizeInPx * 28));
@@ -51,6 +54,15 @@ export default function ProjectList() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [projects]);
+
+  // Helper function to toggle an option in the filter array
+  const toggleFilter = (option: string) => {
+    setFilter((prevFilter) =>
+      prevFilter.includes(option)
+        ? prevFilter.filter((item) => item !== option)
+        : [...prevFilter, option]
+    );
+  };
 
   return (
     <>
@@ -95,52 +107,53 @@ export default function ProjectList() {
               openFilter ? "filterMenuOpen h-64" : "filterMenuClose"
             } `}
           >
+            {/* Update each FilterOption to use the toggleFilter function */}
             <FilterOption
               name={"Javascript"}
               option={"javascript"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Typescript"}
               option={"typescript"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Python"}
               option={"python"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Solidity"}
               option={"solidity"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Nextjs"}
               option={"nextjs"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Hardhat"}
               option={"hardhat"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"React"}
               option={"react"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
             <FilterOption
               name={"Golang"}
               option={"golang"}
-              setFilter={setFilter}
+              toggleFilter={toggleFilter}
               filter={filter}
             />
           </div>
@@ -153,7 +166,7 @@ export default function ProjectList() {
         {projects.slice(0, columnCount).map((project, i) => (
           <Project
             project={project}
-            key={`${filter}-static-${i}`}
+            key={`${filter.join(",")}-static-${i}`}
             index={i}
             columns={columnCount}
           />
@@ -171,7 +184,7 @@ export default function ProjectList() {
         {projects.slice(columnCount).map((project, i) => (
           <Project
             project={project}
-            key={`${filter}-${columnCount + i}`}
+            key={`${filter.join(",")}-${columnCount + i}`}
             index={columnCount + i}
             columns={columnCount}
           />
@@ -183,7 +196,7 @@ export default function ProjectList() {
           className="project-shadow darkGreenBackground border-LightBlue border-8 hover:bg-teal-600 active:border-teal-900 rounded-lg w-52 text-center active:shadow-none active:mt-1"
           onClick={() => {
             setOpen(!open);
-            setFilter("");
+            setFilter([]); // Reset filter on toggle
             setOpenFilter(false);
           }}
         >
