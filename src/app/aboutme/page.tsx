@@ -43,7 +43,7 @@ export default function AboutMe() {
           </div>
           <div className="p-10 pb-24 flex flex-row justify-center space-x-1">
             <a
-              href="/CV_Jaka_Potokar.pdf"
+              href="/JakaPotokarCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -52,7 +52,7 @@ export default function AboutMe() {
               </p>
             </a>
             <a
-              href="/CV_Jaka_Potokar.pdf"
+              href="/JakaPotokarCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="invert"
@@ -195,13 +195,13 @@ export default function AboutMe() {
             ))}
           </div>
           <div className="p-2 rounded-2xl flex flex-row justify-center space-x-1">
-            <a href="/CV_Jaka_Potokar.pdf" target="_blank">
+            <a href="/JakaPotokarCV.pdf" target="_blank">
               <p className=" text-white glowing-underline">
                 Click here to check my CV
               </p>
             </a>
             <a
-              href="/CV_Jaka_Potokar.pdf"
+              href="/JakaPotokarCV.pdf"
               target="_blank"
               className="mt-1 invert"
             >
