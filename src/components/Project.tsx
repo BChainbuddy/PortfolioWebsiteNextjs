@@ -59,7 +59,12 @@ export default function Project({ project, index, columns = 0 }: projectProps) {
               href={project.demo_url}
               target="_blank"
               rel="noreferrer"
-              className="drop-shadow-[0px_0px_0.3rem_#00D19D] hover:drop-shadow-[0px_0px_0.6rem_#00D19D] transition-all duration-300 ease-out md:h-12 md:w-36 sm:h-9 sm:w-[47.5%]"
+              className="relative transform isolate drop-shadow-[0px_0px_0.3rem_#00D19D] hover:drop-shadow-[0px_0px_0.6rem_#00D19D] transition duration-300 ease-out md:h-12 md:w-36 sm:h-9 sm:w-[47.5%]"
+              style={{
+                willChange: "filter",
+                transform: "translateZ(0)",
+                transitionProperty: "filter",
+              }}
             >
               <GradientBox className="bg-gradient-to-r rounded-3xl h-full flex items-center justify-center">
                 <p className="md:text-base sm:text-xs font-mono">
@@ -74,7 +79,12 @@ export default function Project({ project, index, columns = 0 }: projectProps) {
               href={project.github_url}
               target="_blank"
               rel="noreferrer"
-              className="drop-shadow-[0px_0px_0.3rem_#FFFFFF] hover:drop-shadow-[0px_0px_0.6rem_#FFFFFF] transition-all duration-300 ease-out md:h-12 md:w-36 sm:h-9 sm:w-[47.5%]"
+              className="relative transform isolate drop-shadow-[0px_0px_0.3rem_#FFFFFF] hover:drop-shadow-[0px_0px_0.6rem_#FFFFFF] transition duration-300 ease-out md:h-12 md:w-36 sm:h-9 sm:w-[47.5%]"
+              style={{
+                willChange: "filter",
+                transform: "translateZ(0)",
+                transitionProperty: "filter",
+              }}
             >
               <div className="rounded-3xl flex-row md:gap-x-2 sm:gap-x-0.5 h-full flex items-center justify-center bg-white border-[0.2rem] border-[#323131]">
                 <p className="text-[#323131] md:text-base sm:text-xs font-mono">
