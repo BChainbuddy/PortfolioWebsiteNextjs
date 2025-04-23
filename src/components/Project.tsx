@@ -90,9 +90,13 @@ export default function Project({ project, index, columns = 0 }: projectProps) {
                 <p className="text-[#323131] md:text-base sm:text-xs font-mono">
                   SOURCE
                 </p>
-                <div className="relative md:h-7 md:w-7 sm:h-4 sm:w-4">
-                  <Image src="GithubLogo.svg" alt="Github Logo" fill />
-                </div>
+                <Image
+                  src="/GithubLogo3.png"
+                  alt="Github Logo"
+                  width={28}
+                  height={28}
+                  className="md:h-6 md:w-6 sm:h-4 sm:w-4"
+                />
               </div>
             </a>
           )}

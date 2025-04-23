@@ -4,7 +4,6 @@ import Spline from "@splinetool/react-spline/next";
 import { motion } from "framer-motion";
 
 export default function SplineScene() {
-
   return (
     <>
       <div className="relative lg:h-[100%] lg:w-[40vw] md:h-60 md:w-60">
