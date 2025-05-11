@@ -7,9 +7,11 @@ export default function CategoryList({ categories }: { categories: string[] }) {
       {categories.map((category: string) => {
         const key = category.toLowerCase() as keyof typeof IMAGES;
         return (
-          <div className="relative h-7 w-7 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+          <div
+            className="relative h-7 w-7 rounded-lg overflow-hidden bg-white flex items-center justify-center"
+            key={category}
+          >
             <Image
-              key={category}
               src={IMAGES[key]}
               alt={category}
               width={0}
