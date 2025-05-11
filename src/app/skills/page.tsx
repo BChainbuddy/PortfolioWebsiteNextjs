@@ -7,7 +7,7 @@ import PageTitle from "@/components/PageTitle";
 export default function Skills() {
   return (
     <>
-      <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 pb-8">
+      <div className="flex flex-col lg:space-y-12 sm:space-y-16 sm:pb-20 md:pb-0">
         <PageTitle title="TECHNOLOGIES I'VE USED" />
         <div className="lg:flex place-items-center sm:hidden lg:space-y-20 lg:flex-col pr-48 items-start mx-auto">
           <div className="flex">
@@ -61,7 +61,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="sm:hidden lg:flex flex-col space-y-16 p-8 pb-44">
+      {/* <div className="sm:hidden lg:flex flex-col space-y-16 p-8 pb-44">
         <div className="lg:p-8 lg:mt-10 sm:mt-14">
           <h1 className="md:text-4xl sm:text-3xl text-center font-mono text-transparent bg-clip-text sm:custom-gradient-top md:custom-gradient-bottom">
             CERTIFICATES / LEARNING RESOURCES
@@ -117,7 +117,7 @@ export default function Skills() {
             even={false}
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
