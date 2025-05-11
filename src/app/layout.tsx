@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Head from "next/head";
-// import VideoBackground from "@/components/VideoBackground";
 
 export const metadata: Metadata = {
   title: "Jaka's Portfolio",
@@ -45,19 +44,23 @@ export default function RootLayout({
           <Header />
           <div id="content">{children}</div>
           <div id="backgroundPicture" className="relative">
-            <Image
-              src="/backgroundBlurred.png"
-              alt="bakgroundPicture"
-              quality={100}
-              fill
-              sizes="100%"
-              placeholder="blur"
-              blurDataURL={"/img/logo.png"}
-              style={{
-                objectFit: "cover",
-              }}
-            />
-            {/* <VideoBackground /> */}
+            <picture>
+              <source srcSet="/backgroundBlurred.webp" type="image/webp" />
+              <source srcSet="/backgroundBlurred.png" type="image/png" />
+              <Image
+                src="/backgroundBlurred.png"
+                alt="backgroundPicture"
+                quality={100}
+                fill
+                sizes="100%"
+                placeholder="blur"
+                blurDataURL={"/img/logo.png"}
+                style={{
+                  objectFit: "cover",
+                }}
+                priority={true}
+              />
+            </picture>
           </div>
         </body>
       </>
