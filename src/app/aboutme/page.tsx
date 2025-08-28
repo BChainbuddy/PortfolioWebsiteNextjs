@@ -111,11 +111,11 @@ export default function AboutMe() {
               Experience
             </p>
             <ExperienceInfo
-              description="Mainly focused on front-end technologies such as React, React Native, Nextjs, also done little Solidity with Hardhat framework"
+              description="Mainly focused on front-end technologies such as React, React Native, Nextjs, also done little Solidity with Hardhat framework and Python FastAPI API development"
               company="Niov Labs"
-              title="Front-end Developer"
+              title="Full-Stack Developer"
               start="Aug 2024"
-              end="Present"
+              end="Aug 2025"
             />
             <ExperienceInfo
               description="This was project made for hackaton ETH Toronto, I was in charge of creating the frontend for our Dapp"
