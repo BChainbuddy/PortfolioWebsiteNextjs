@@ -32,7 +32,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="lg:space-y-8 sm:space-y-10 md:pb-14 sm:pb-8 overflow-hidden">
+    <div className="lg:space-y-8 sm:space-y-10 pb-[10vh] overflow-hidden">
       <PageTitle title="ABOUT ME" />
       <div className="md:flex flex-row justify-center lg:gap-x-32 md:gap-x-14 hidden md:px-[2%] lg:px-[0]">
         <div className="backdrop-blur-2xl darkGreenBackground w-[38rem] rounded-3xl border-LightBlue p-3">
@@ -110,6 +110,13 @@ export default function AboutMe() {
             <p className="text-LightBlue text-2xl font-mono text-center">
               Experience
             </p>
+            <ExperienceInfo
+              description="Leading front-end development efforts React Native to build intuitive and user-friendly mobile application. Also leading the whole development team in coordination and project management. Also taking care of DevOps like deployment strategies."
+              company="JoinUs"
+              title="Founding developer"
+              start="Feb 2025"
+              end="Present"
+            />
             <ExperienceInfo
               description="Mainly focused on front-end technologies such as React, React Native, Nextjs, also done little Solidity with Hardhat framework and Python FastAPI API development"
               company="Niov Labs"
