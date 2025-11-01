@@ -8,7 +8,7 @@ interface projectProps {
   project: {
     title: string;
     img_src: string;
-    github_url: string;
+    github_url?: string;
     demo_url?: string;
     description: string;
     category: string[];

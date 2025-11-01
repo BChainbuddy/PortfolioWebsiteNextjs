@@ -8,6 +8,14 @@
     "category": ["nextjs", "prisma", "postgresql", "openai", "typescript"]
   },
   {
+    "title": "TRADE FORGE",
+    "description": "A position manager protocol with smart contracts and full-stack services that automates trade execution based on user-defined targets and expiration dates.",
+    "demo_url": "https://position-manager.vercel.app/",
+    "github_url": "https://github.com/BChainbuddy/PositionManager",
+    "img_src": "/tradeforge.png",
+    "category": ["nextjs", "typescript", "solidity", "expressjs", "thegraph"]
+  },
+  {
     "title": "OTZAR.AI",
     "description": "A responsive landing page built with React and Express that processes whitelist requests, offering a seamless user experience.",
     "github_url": "",
@@ -40,28 +48,12 @@
     "category": ["golang"]
   },
   {
-    "title": "WEAVESWAP",
-    "description": "A decentralized exchange and lending protocol built for the BNB Hackathon, with smart contracts designed and deployed for the platform.",
-    "github_url": "https://github.com/WeaveSwap/smart-contracts",
-    "demo_url": "https://weaveonbnb.vercel.app/",
-    "img_src": "/WeaveSwap.png",
-    "category": ["javascript", "solidity", "hardhat"]
-  },
-  {
     "title": "TOKEN BRIDGE",
     "description": "A decentralized token bridge for secure cross-chain transfers, built with Solidity and Hardhat using secure signing methods.",
     "github_url": "https://github.com/BChainbuddy/TokenBridge",
     "demo_url": "",
     "img_src": "/CryptoBridge.jpeg",
     "category": ["solidity", "javascript", "hardhat"]
-  },
-  {
-    "title": "E-COMMERCE BACKEND",
-    "description": "A robust Express.js backend for an e-commerce platform that manages accounts, authentication, orders, and shopping carts.",
-    "github_url": "https://github.com/BChainbuddy/E-commerce_express",
-    "demo_url": "",
-    "img_src": "/node-express-web-server.png",
-    "category": ["javascript", "expressjs"]
   },
   {
     "title": "LIQUIDITY POOL",

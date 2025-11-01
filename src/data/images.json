@@ -18,5 +18,6 @@
   "mongodb": "/MongoDBLogo.png",
   "prisma": "/prisma.png",
   "typescript": "/typescript.png",
-  "openai": "/openai.png"
+  "openai": "/openai.png",
+  "thegraph": "/thegraph.jpg"
 }
