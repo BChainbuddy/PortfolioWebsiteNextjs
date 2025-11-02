@@ -89,7 +89,7 @@ export default function AboutMe() {
             <div className="flex flex-col text-white p-8 gap-y-3">
               <AboutData
                 subTitle="education"
-                title="Masters of Business Informatics(last year)"
+                title="Masters of Business Informatics"
               />
               <AboutData
                 subTitle="hobbies"
